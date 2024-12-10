@@ -1,0 +1,183 @@
+/* General reset for margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: white;
+  background-color: #37629c;
+}
+
+header {
+  background-color: transparent; /* Set initial background color with lower opacity */
+  padding: 15px 20px; /* Add padding for spacing */
+  position: fixed; /* Keep the header on top */
+  width: calc(100% - 40px); /* Adjust width to account for padding */
+  margin: 15px 30px; /* Add margin for spacing from the edges */
+  border-radius: 100px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  z-index: 1000; /* Ensure it's above other content */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.navbar {
+  display: flex; /* Flexbox layout for even spacing */
+  justify-content: space-evenly; /* Evenly distribute elements */
+  align-items: center; /* Vertically center items */
+}
+
+.navbar a {
+  text-decoration: none; /* Remove underline from links */
+  font-weight: 200; /* Bold font for visibility */
+  font-size: 15px; /* Adjust font size as needed */
+  color: white; /* Default text color */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover animation */
+}
+
+.navbar a.active {
+  font-weight: 500;
+  color: #ffde59; 
+  transform: scale(1.1); /* Slight enlargement */
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  font-weight: 500;
+  /* color: #ffde59; */
+  transform: scale(1.1); /* Slightly enlarge the text */
+}
+
+/* Main landing image wrapper */
+.landing-container {
+  text-align: center;
+  margin: 0;
+}
+
+.landing-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* The info box/rectangle */
+.info-box {
+  background-color: #37629c; /* Set desired background color */
+  height: 390px; /* You can change this value to whatever height you want */
+  width: 100%;
+  margin: 0; /* No space between image and rectangle */
+  padding: 0; /* Ensure no additional padding exists */
+}
+
+.logo-container {
+  position: absolute; /* Allow absolute positioning */
+  top: 457px;
+  left: 1000px; 
+}
+
+.logo {
+  width: 200px; /* Adjust the size of the logo as needed */
+  height: auto;
+}
+
+.festival-pic-container {
+  position: absolute;
+  top: 435px;
+  left: 1225px;
+}
+
+.festivalpic {
+  width: 235px; /* Adjust the size of the logo as needed */
+  height: auto;
+  border: 5px solid white;
+  border-radius: 20px;
+}
+
+/* General styles for the container */
+.welcome-message-container {
+  position: absolute;
+  top: 650px;
+  left: 630px;
+  color: white;
+  text-align: right;
+  padding: 8px;
+}
+
+/* Style specifically for the header */
+#welcome-header {
+  font-family: "Montserrat", sans-serif;
+  font-style: Normal;
+  font-weight: 550;
+  font-size: 32px; 
+  margin-bottom: 10px; 
+}
+
+/* Style specifically for the paragraph text */
+#welcome-paragraph {
+  font-family: "Montserrat", sans-serif;
+  font-style: light;
+  font-size: 15px; /* Adjust font size for better readability */
+  letter-spacing: 1.3px;
+  line-height: 1.5;
+}
+
+.branding {
+  color: #ffde59;
+  /* padding: 8px; */
+}
+
+#Naga-Bisita {
+  position: absolute;
+  top: 495px;
+  left: 70px;
+  color: #ffde59;
+  font-family: 'Adlery Pro', sans-serif;              
+  font-size: 130px;
+  font-style: Normal;
+  text-shadow: 5px 6px 0px rgba(0, 0, 0, 0.4); /* Creates a shadow effect */
+  transform: rotate(-7deg);
+}
+
+#KO {
+  position: absolute;
+  top: 670px;
+  left: 190px;
+  color: #fff06b;
+  font-family: "League Spartan", sans-serif;
+  font-size: 240px;
+  font-style: Normal;
+  text-shadow: 9px 9px 0px rgba(0, 0, 0, 0.4); /* Creates a shadow effect */
+}
+
+.background {
+  position: relative; /* Keeps the container positioned within the flow */
+  width: 100%; /* Full screen width */
+  height: 100vh; /* Full screen height */
+  overflow: hidden; /* Ensures no extra parts of the image are visible outside the container */
+}
+
+.background img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Cover the entire width */
+  height: 100%; /* Cover the entire height */
+  object-fit: cover; /* Ensures the image fills the container while maintaining aspect ratio */
+  opacity: 17%;
+}
+
+.ubos {
+  position: relative; /* Keeps it positioned relative to its container or previous element */
+  width: 100%; /* Makes the image take the full width of the screen */ /* Adjusts the height to fill the viewport */
+  overflow: hidden; /* Ensures content doesn't overflow */
+}
+
+.ubos img {
+  width: 100%; /* Ensures the image scales to the container's width */
+  object-fit: cover; /* Ensures the image maintains proportions and fills the container */
+}

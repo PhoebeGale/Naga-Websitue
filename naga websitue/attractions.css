@@ -1,0 +1,284 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: #37629c;
+}
+
+/* Navbar Styling */
+
+header {
+    background-color: transparent; /* Set initial background color with lower opacity */
+    padding: 15px 20px; /* Add padding for spacing */
+    position: fixed; /* Keep the header on top */
+    width: calc(100% - 40px); /* Adjust width to account for padding */
+    margin: 15px 30px; /* Add margin for spacing from the edges */
+    border-radius: 100px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    z-index: 1000; /* Ensure it's above other content */
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  .navbar {
+    display: flex; /* Flexbox layout for even spacing */
+    justify-content: space-evenly; /* Evenly distribute elements */
+    align-items: center; /* Vertically center items */
+  }
+  
+  .navbar a {
+    text-decoration: none; /* Remove underline from links */
+    font-weight: 200; /* Bold font for visibility */
+    font-size: 15px; /* Adjust font size as needed */
+    color: white; /* Default text color */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover animation */
+  }
+  
+  .navbar a.active {
+    font-weight: 500;
+    color: #ffde59; 
+    transform: scale(1.1); /* Slight enlargement */
+    transition: all 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    font-weight: 500;
+    /* color: #ffde59; */
+    transform: scale(1.1); /* Slightly enlarge the text */
+  }
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+    background-image: url('b1.jpg'); /* Set the background image */
+    background-position: top center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container_2 {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.attract-title {
+    color: #ffde59;
+}
+
+#visit-text {
+    position: absolute;
+    top: 110px;
+    left: 650px;
+    color: #ffde59;
+    font-family: 'Adlery Pro', sans-serif;              
+    font-size: 80px;
+    font-style: Normal;
+    text-shadow: 5px 6px 0px rgba(0, 0, 0, 0.4); /* Creates a shadow effect */
+}
+
+#your-screen {
+    position: absolute;
+    top: 100px;
+    left: 1100px;
+    color: #fff06b;
+    font-family: "League Spartan", sans-serif;
+    font-size: 50px;
+    font-style: Normal;
+    text-shadow: 9px 9px 0px rgba(0, 0, 0, 0.4); /* Creates a shadow effect */
+    text-align: center;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.banner {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    margin-top: 200px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.naga {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 11rem;
+    color: #23478b;
+    margin-left: 20px;
+    font-weight: bold;
+    text-shadow: 7px 7px 0px rgba(0, 0, 0, 0.4);
+    text-align: left;
+}
+
+.subtext {
+    position: absolute;
+    top: 390px;
+    left: 60px;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 28px;
+    color: #23478b;
+    font-weight: bold;
+    letter-spacing: 5px;
+    /* margin: 0;
+    margin-top: 1rem; /* Adds a margin of 1rem below the .naga text */
+    text-align: left; 
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+    padding-left: 130px;
+}
+
+.logo {
+    /* width: 150px; /* Default size for larger screens */
+    /* height: 150px; */
+    object-fit: contain;
+    transition: transform 0.3s ease; /* Add hover animation */
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.mobile-container {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    width: 300px;
+    height: auto;
+}
+
+.mobile-gif {
+    width: 200%;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .naga {
+        font-size: 6rem; /* Adjust headline size */
+    }
+
+    .subtext {
+        font-size: 1.2rem; /* Adjust subtext size */
+    }
+
+    .logos .logo {
+        width: 100px; /* Smaller logos */
+        height: 100px;
+    }
+
+    .mobile-container {
+        width: 80%;
+        right: 10%; /* Center on smaller screens */
+        bottom: 5%;
+    }
+
+    .banner {
+        flex-direction: column; /* Stack banner content */
+        align-items: center; /* Center-align text */
+        text-align: center;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .naga {
+        font-size: 4rem; /* Further scale down for mobile */
+    }
+
+    .logos .logo {
+        width: 80px; /* Smaller logos for very small screens */
+        height: 80px;
+    }
+
+    .mobile-gif {
+        width: 90%; /* Reduce size of GIF */
+    }
+}
+
+/* Attractions Section */
+.attractions {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease-in-out;
+}
+
+.attraction-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.attraction-card:hover {
+    transform: translateY(-10px);
+}
+
+.attraction-card img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.features p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features ul li {
+    margin-bottom: 5px;
+}
+
+.more-info {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #144169;
+    text-decoration: none;
+}
+
+.more-info:hover {
+    color: #F8C82C;
+}
