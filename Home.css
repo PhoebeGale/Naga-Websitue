@@ -15,11 +15,11 @@ body {
 
 header {
   background-color: transparent; /* Set initial background color with lower opacity */
-  padding: 25px 20px;
+  /* padding: 25px 20px; */
   position: fixed; /* Keep the header on top */
   width: 100%; 
   height: 75px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  
   z-index: 1000; /* Ensure it's above other content */
   transition: background-color 0.3s ease; /* Smooth transition */
 }
@@ -37,6 +37,7 @@ header {
   justify-content: flex-end; /* Align items to the right */
   padding-right: 50px;
   transition: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
 .navbar .brand {
@@ -138,7 +139,7 @@ header {
 /* The info box/rectangle */
 .info-box {
   background-color: #37629c; /* Set desired background color */
-  height: 390px; /* You can change this value to whatever height you want */
+  height: 340px; /* You can change this value to whatever height you want */
   width: 100%;
   margin: 0; /* No space between image and rectangle */
   padding: 0; /* Ensure no additional padding exists */
@@ -162,7 +163,7 @@ header {
 }
 
 .festivalpic {
-  width: 235px; /* Adjust the size of the logo as needed */
+  width: 235px; 
   height: auto;
   border: 5px solid white;
   border-radius: 20px;
@@ -196,7 +197,7 @@ header {
   line-height: 1.5;
 }
 
-.branding {
+.Home-title {
   color: #ffde59;
   /* padding: 8px; */
 }
@@ -241,13 +242,182 @@ header {
   opacity: 17%;
 }
 
-.ubos {
+.fest {
   position: relative; /* Keeps it positioned relative to its container or previous element */
   width: 100%; /* Makes the image take the full width of the screen */ /* Adjusts the height to fill the viewport */
-  overflow: hidden; /* Ensures content doesn't overflow */
+  height: auto;
+  overflow: hidden; 
+  margin: 0;
 }
 
-.ubos img {
+.fest img {
   width: 100%; /* Ensures the image scales to the container's width */
+  height: auto;
   object-fit: cover; /* Ensures the image maintains proportions and fills the container */
+  display: block;
+}
+
+/* New box below the fest section */
+.info-box1 {
+  background-color: #d9d9d9; /* Light gray background */
+  padding: 70px; /* Add padding */
+  text-align: center; /* Center the text */
+  position: relative;
+  margin: 0;
+}
+
+/* Text styling inside the new-info-box */
+.info-box1 p {
+  line-height: 1.4; /* Improve readability */
+}
+
+#Where {
+  color: #164975;
+  font-family: "League Spartan", sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+#How {
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-size: 23px;
+  font-style: light;
+  letter-spacing: 0.8px;
+  /* font-weight: 700; */
+}
+
+#It-just {
+  color: #ffde59;
+  font-family: 'Adlery Pro', sans-serif; 
+  font-size: 90px;
+  font-style: Normal;
+  text-shadow: 5px 6px 0px rgba(0, 0, 0, 0.4); /* Creates a shadow effect */ 
+  text-align: center; 
+  padding: 50px;
+  z-index: 100;
+}
+
+
+.footer {
+  background-color: #164975;
+  display: flex; /* Enable flexbox for the footer */
+  justify-content: space-between; /* Distribute the sections horizontally */
+  /* align-items: flex-start;  */
+  padding: 5px;
+  padding-left: 50px;
+  padding-right: 50px;
+  width: 100%; 
+  height: 300px;
+  gap: 25px;
+  font-size: 16px;
+  font-weight: 450;
+  height: 100%;
+}
+
+.republic, .Gov-ph, .Gov-link, .logos {
+  display: flex; /* Flexbox for all sections */
+  flex-direction: column; /* Arrange items vertically */
+  align-items: flex-start; /* Align items to the start (left) */
+  flex: 1; /* Allow each section to take equal space */
+  padding: 5px; /* Padding inside each section */
+}
+
+.republic img {
+  align-items: center;
+  width: 250px; /* Adjust image size as needed */
+  height: auto;
+}
+
+.Gov-ph {
+  padding-top: 30px;
+  gap: 30px;
+  line-height: 23px;
+}
+
+.Gov-ph a {
+  text-decoration: none;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  /* font-weight: 450; */
+}
+
+.Gov-link {
+  padding-top: 30px; /* Padding inside the section */
+}
+
+.Gov-link p {
+  text-align: left; /* Center the text */
+  font-family: "Montserrat", sans-serif; /* Font styling */
+  color: white; /* Text color */
+  margin-bottom: 30px;
+}
+
+.Gov-link a {
+  text-decoration: none;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  /* font-weight: 500; */
+  line-height: 23px;
+}
+
+
+.logos {
+  display: flex; /* Flexbox for logos */
+  flex-direction: row; /* Align logos horizontally */
+  align-items: flex-start; 
+  gap: 25px; /* Space between logos */
+  padding-top: 25px;
+  padding-bottom: 30px;
+  padding-left: 0;
+}
+
+.logoc {
+  width: 60px;
+}
+
+.Naga-bisitac {
+  padding-top: 2px;
+  width: 80px
+}
+
+.Love-ph {
+  padding-top: 10px;
+  width: 100px
+}
+
+/* Styling for the contact section */
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  padding-right: 5px;
+}
+
+/* Styling for each contact item (icon and text) */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between the icon and text */
+}
+
+/* Icon styling */
+.contact-item i {
+  font-size: 24px; /* Adjust the size of the icon */
+  color: white; /* Default icon color */
+}
+
+/* Hover effect for icon */
+/* .contact-item i:hover {
+  transform: scale(1.2); 
+  color: #007bff; 
+} */
+
+.contact-item p {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  margin: 0;
 }
