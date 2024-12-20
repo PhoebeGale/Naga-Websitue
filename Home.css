@@ -18,7 +18,7 @@ header {
   padding: 25px 20px;
   position: fixed; /* Keep the header on top */
   width: 100%; 
-  height: 70px;
+  height: 75px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
   z-index: 1000; /* Ensure it's above other content */
   transition: background-color 0.3s ease; /* Smooth transition */
@@ -30,6 +30,7 @@ header {
   gap: 50px;
   align-items: center; /* Vertically center items */
   transition: none;
+  height: 100%
 }
 
 .navbar.scrolled {
@@ -47,16 +48,62 @@ header {
 /* Initially hide the logo */
 .brand {
   display: none;
+  align-items: center; /* Center logo and text vertically */
+  gap: 10px; /* Add space between logo and text */
 }
+
+.brand img {
+  width: 50px; /* Maintain aspect ratio */
+  height: auto;
+}
+
+.brand .text {
+  display: flex;
+  flex-direction: column; /* Stack text vertically */
+  align-items: flex-start; /* Align text to the left */
+  gap: 10px;
+}
+
+.brand .text p {
+  font-size: 14px; /* Adjust font size for readability */
+  margin: 0; /* Remove default margins */
+  color: white; /* Ensure text color matches */
+}
+
+.brand .text h1 {
+  width: 100%; /* Line spans full width of the text container */
+  height: 1px; /* Make it a thin line */
+  background-color: white; /* Line color */
+  margin: -5px 0; /* Adjust to center between text */
+}
+
+/* .brand p, .brand h1 {
+  margin: 0;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.brand p {
+  font-size: 12px;
+  color: white;
+}
+
+.brand h1 {
+  font-size: 16px;
+  color: white;
+  font-weight: normal;
+  margin: 5px 0;
+} */
 
 /* When scrolled, show the logo */
 .navbar.scrolled .brand {
-  display: block;
+  display: flex;
+  align-items: center;
 }
 
 .navbar a {
   text-decoration: none; /* Remove underline from links */
-  font-weight: 400; /* Bold font for visibility */
+  font-weight: 450; /* Bold font for visibility */
   font-size: 13px; /* Adjust font size as needed */
   color: white; /* Default text color */
   transition: transform 0.3s ease, color 0.3s ease; /* Only apply hover effects */
