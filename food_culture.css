@@ -1,0 +1,142 @@
+/* General reset for margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: white;
+  background-color: #37629c;
+}
+
+header {
+  background-color: transparent; /* Set initial background color with lower opacity */
+  padding: 25px 20px;
+  position: fixed; /* Keep the header on top */
+  width: 100%; 
+  height: 70px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  z-index: 1000; /* Ensure it's above other content */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.navbar {
+  display: flex; /* Flexbox layout for even spacing */
+  justify-content: center;
+  gap: 50px;
+  align-items: center; /* Vertically center items */
+  transition: none;
+}
+
+.navbar.scrolled {
+  justify-content: flex-end; /* Align items to the right */
+  padding-right: 50px;
+  transition: none;
+}
+
+.navbar .brand {
+  padding-left: 50px;
+  position: absolute;
+  left: 20px; /* Keep logo on the left when scrolled */
+}
+
+/* Initially hide the logo */
+.brand {
+  display: none;
+}
+
+/* When scrolled, show the logo */
+.navbar.scrolled .brand {
+  display: block;
+}
+
+.navbar a {
+  text-decoration: none; /* Remove underline from links */
+  font-weight: 400; /* Bold font for visibility */
+  font-size: 13px; /* Adjust font size as needed */
+  color: white; /* Default text color */
+  transition: transform 0.3s ease, color 0.3s ease; /* Only apply hover effects */
+}
+
+/* .navbar a.active {
+  font-weight: 500;
+  color: #ffde59; 
+  transform: scale(1.1); 
+  transition: all 0.3s ease;
+} */
+
+.navbar a:hover {
+  font-weight: 500;
+  color: #ffde59;
+  transform: scale(1.1); /* Slightly enlarge the text */
+}
+
+.food-bg {
+  text-align: center;
+  margin: 0;
+}
+
+.food-bg img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  opacity: 61%;
+}
+
+.branding {
+  color: #ffde59;
+  /* padding: 8px; */
+}
+
+.fest-pic img{
+  position: absolute;
+  top: 70px;
+  left: 100px;
+}
+
+#A-taste-of {
+  position: absolute;
+  top: 140px;
+  left: 250px;
+  color: #ffde59;
+  font-family: 'Adlery Pro', sans-serif;              
+  font-size: 110px;
+  font-style: Normal;
+  text-shadow: 5px 6px 0px rgba(0, 0, 0, 0.4); /* Creates a shadow effect */
+  transform: rotate(-7deg);
+}
+
+#NAGA {
+  position: absolute;
+  top: 120px;
+  left: 750px;
+  color: #fff06b;
+  font-family: "League Spartan", sans-serif;
+  font-size: 190px;
+  font-style: Normal;
+  text-shadow: 9px 9px 0px rgba(0, 0, 0, 0.4); /* Creates a shadow effect */
+}
+
+.dagitab-vid {
+  position: absolute;
+  top: 800px;
+  left: 170px;
+  z-index: 2; /* Make sure it's above the background image */
+}
+
+video {
+  width: 96%;
+  border-radius: 10px; /* Optional: Add rounded corners for aesthetics */
+}
+
+.foodscroll {
+  position: absolute;
+  top: 1500px;
+  left: 105px;
+}
+
