@@ -10,7 +10,7 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   color: white;
-  background-color: #37629c;
+  background-color: black;
 }
 
 header {
@@ -123,7 +123,7 @@ header {
   transform: scale(1.1); /* Slightly enlarge the text */
 }
 
-/* Main landing image wrapper */
+/* ------------------Main content ---------------*/
 .landing-container {
   text-align: center;
   margin: 0;
@@ -173,7 +173,7 @@ header {
 .welcome-message-container {
   position: absolute;
   top: 650px;
-  left: 630px;
+  left: 620px;
   color: white;
   text-align: right;
   padding: 8px;
@@ -288,19 +288,71 @@ header {
   /* font-weight: 700; */
 }
 
+.Home-video {
+  position: relative;
+  width: 100%; /* Make it stretch across the screen width */
+  margin: 0 auto; /* Center the video horizontally */
+  height: auto;
+  margin-bottom: 150px;
+}
+
+video {
+  width: 100%; /* Fit the video to the container's width */
+  height: auto;
+  object-fit: cover;
+}
+
 #It-just {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translateX(-16%) translateY(-50%);
   color: #ffde59;
   font-family: 'Adlery Pro', sans-serif; 
-  font-size: 90px;
+  font-size: 110px;
   font-style: Normal;
   text-shadow: 5px 6px 0px rgba(0, 0, 0, 0.4); /* Creates a shadow effect */ 
   text-align: center; 
-  padding: 50px;
-  z-index: 100;
+  z-index: 10;
 }
 
+.Home-video img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 670px;
+}
 
+.map {
+  position: relative; /* Keeps it positioned relative to its container or previous element */
+  width: 100%; /* Makes the image take the full width of the screen */ /* Adjusts the height to fill the viewport */
+  height: auto;
+  overflow: hidden; 
+  margin: 0;
+}
+
+.map img {
+  width: 100%; /* Ensures the image scales to the container's width */
+  height: auto;
+  object-fit: cover; /* Ensures the image maintains proportions and fills the container */
+  display: block;
+}
+
+.embed-map {
+  position: absolute; /* Position the map on top of the image */
+  top: 100px; /* Align to the top of the container */
+  left: 160px; /* Align to the left of the container */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  z-index: 1; /* Ensures map appears on top of the image */
+
+}
+
+/* -------------- footer ----------------- */
 .footer {
+  margin-top: 0;
   background-color: #164975;
   display: flex; /* Enable flexbox for the footer */
   justify-content: space-between; /* Distribute the sections horizontally */
