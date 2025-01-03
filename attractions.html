@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="attractions.css">
-    <link rel="icon" href="favicon.png"
+    <link rel="icon" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -19,19 +19,21 @@
 </head>
 
 <body>
-    <!-- Header with Navbar -->
-    <header class="header">
-        <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="#AboutUs">About Us</a>
-            <a href="food_culture.html">Food & Culture</a>
-            <a href="#Events">Events</a>
-            <a href="attractions.html">Tourist Spots</a>
-            <a href="#Contacts">Contacts</a>
-        </nav>
-    </header>
+ <!-- Header Section -->
+        <header class="header">
+            <nav class="navbar">
+                <div class="brand">
+                    <img src="brand.png" alt="Brand"> <!-- Your logo here -->
+                </div>
+                <a href="Home.html">HOME</a>
+                <a href="AboutUs.html">ABOUT US</a>
+                <a href="food_culture.html">FOOD AND CULTURE</a>
+                <a href="#Events">EVENTS</a>
+                <a href="attractions.html">TOURIST SPOTS</a>
+                <a href="#Contacts">CONTACTS</a>
+            </nav>
+        </header>
 
-    <!-- Hero Section -->
     <!-- Hero Section -->
 <section class="hero">
     <div class="container_2">
@@ -62,72 +64,212 @@
 
     <!-- Attractions Section -->
     <section id="attractions" class="attractions">
-        <div class="attraction-card">
-            <h3>Mount Naupa</h3>
-            <p class="price">P20 /head</p>
-            <img src="m5.jpg" alt="Mount Naupa">
-            <div class="features">
-                <p>Features</p>
-                <ul>
-                    <li>Great hiking trails</li>
-                    <li>Breathtaking sunrise views</li>
-                    <li>Camping-friendly spots</li>
-                </ul>
-                <a href="#" class="more-info">&rarr;</a>
+    <div class="attraction-card">
+        <h3 class="mount-naupa">MOUNT NAUPA</h3>
+        <p class="price">P20 /head</p>
+        <img src="m5.jpg" alt="Mount Naupa">
+        <div class="features">
+            <div class = "align">
+            <p>Features</p>
+            <button class="explore-more" data-modal="modal-naupa">Explore More</button>
             </div>
+            <ul>
+                <li>Great hiking trails</li>
+                <li>Breathtaking sunrise views</li>
+                <li>Camping-friendly spots</li>
+            </ul>
         </div>
+    </div>
+
+<!-- Modal Structure -->
+<div id="modal-naupa" class="modal">
+  <div class="modal-content">
+    <!-- Close button -->
+    <span class="close" data-modal="modal-naupa">&times;</span>
+
+    <!-- Image Carousel -->
+    <div class="carousel">
+      <div class="slides">
+        <img src="m6.jpg" class="active" alt="Discover Mount Naupa">
+        <img src="m1.jpg" alt="Mount Naupa View">
+        <img src="m2.jpg" alt="Nature at Mount Naupa">
+        <img src="m3.jpg" alt="Trail at Mount Naupa">
+        <img src="m4.jpg">
+        <img src="m5.jpg">
+        <img src="m7.jpg">
+          <!-- Text Overlay for m6.jpg -->
+    <div class="text-overlay">
+      <h2>Discover Mount Naupa</h2>
+      <p>Experience serenity, adventure, and breathtaking views!</p>
+    </div>
+      </div>
+
+      <!-- Navigation Arrows -->
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+
+      <!-- Dots for navigation -->
+      <div class="dots">
+        <span data-slide="0" class="dot active"></span>
+        <span data-slide="1" class="dot"></span>
+        <span data-slide="2" class="dot"></span>
+        <span data-slide="3" class="dot"></span>
+        <span data-slide="4" class="dot"></span>
+        <span data-slide="5" class="dot"></span>
+        <span data-slide="6" class="dot"></span>
+      </div>
+    </div>
+
+    <!-- Description below the image -->
+    <div class="modal-description">
+      <p>Mount Naupa offers a peaceful escape for hikers, campers, and nature enthusiasts. Bask in stunning sunrise views, walk serene trails, and connect with nature like never before. A perfect destination to relax and recharge!</p>
+      <blockquote>"At the summit of Mount Naupa, the world falls silent, and the soul finds peace in the embrace of nature's beauty."</blockquote>
+    </div>
+  </div>
+</div>
+
         <div class="attraction-card">
             <h3>Naga Boardwalk</h3>
             <p class="price">Free</p>
             <img src="pink1.jpg" alt="Naga Boardwalk">
             <div class="features">
-                <p>Features</p>
+                 <div class = "align">
+            <p>Features</p>
+            <button class="explore-more" data-modal="modal-board">Explore More</button>
+            </div>
                 <ul>
                     <li>Perfect for family picnics</li>
                     <li>Seaside breeze</li>
                     <li>Evening light displays</li>
                 </ul>
-                <a href="#" class="more-info">&rarr;</a>
             </div>
         </div>
+<!-- Modal Structure -->
+<div id="modal-board" class="modal">
+  <div class="modal-content">
+    <!-- Close button -->
+    <span class="close" data-modal="modal-board">&times;</span>
+
+    <!-- Image Carousel -->
+    <div class="carousel">
+      <div class="slides">
+        <img src="w5.jpg" class="active" alt="Naga Boardwalk Overview">
+        <img src="w1.jpg" alt="Evening Lights at the Boardwalk">
+        <img src="w2.jpg" alt="Sunset by the Bay">
+        <img src="w3.jpg" alt="Boardwalk Activities">
+        <img src="w4.jpg" alt="Relaxation Areas">
+        <img src="w6.jpg">
+
+        <!-- Text Overlay for w5.jpg -->
+        <div class="text-overlay">
+          <h2>Explore Naga Boardwalk</h2>
+          <p>Where tranquility meets the vibrant charm of the sea.</p>
+        </div>
+      </div>
+
+      <!-- Navigation Arrows -->
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+
+      <!-- Dots for navigation -->
+      <div class="dots">
+        <span data-slide="0" class="dot active"></span>
+        <span data-slide="1" class="dot"></span>
+        <span data-slide="2" class="dot"></span>
+        <span data-slide="3" class="dot"></span>
+        <span data-slide="4" class="dot"></span>
+        <span data-slide="5" class="dot"></span>
+      </div>
+    </div>
+
+    <!-- Description below the image -->
+    <div class="modal-description">
+      <p>The Naga Boardwalk offers a picturesque escape by the sea, perfect for leisurely strolls, breathtaking sunsets, and vibrant activities. Enjoy the peaceful ambiance during the day and the lively charm of illuminated paths at night. Whether you're looking for relaxation or fun, the boardwalk has something for everyone!</p>
+      <blockquote>"Feel the sea breeze, hear the calming waves, and let the Naga Boardwalk be your sanctuary."</blockquote>
+    </div>
+  </div>
+</div>
+
         <div class="attraction-card">
             <h3>Museo Naga</h3>
             <p class="price">P50 /head</p>
             <img src="museum.jpg" alt="Museo Naga">
             <div class="features">
-                <p>Features</p>
+                 <div class = "align">
+            <p>Features</p>
+            <button class="explore-more" data-modal="modal-naupa">Explore More</button>
+            </div>
                 <ul>
                     <li>Historical exhibits</li>
                     <li>Interactive activities</li>
                     <li>Local cultural preservation</li>
                 </ul>
-                <a href="#" class="more-info">&rarr;</a>
             </div>
         </div>
+        <!-- Modal for museum -->
+    <div id="modal-museum" class="modal">
+        <div class="modal-content">
+            <span class="close" data-modal="modal-museum">&times;</span>
+            <h3>Museum</h3>
+            <p>Pgwapaaaaaaaaaa mananggg ahddwugdbyhvx vcvcghUFGBC EHFBCSDFBXDHBExperience the serenity of Mount Naupa. Perfect for hiking, camping, and capturing stunning sunrise views. A great spot for outdoor enthusiasts!</p>
+        </div>
+    </div>
         <div class="attraction-card">
             <h3>Pasilong sa Naga</h3>
             <p class="price">Free</p>
             <img src="pasilong.jpg" alt="Pasilong Naga">
             <div class="features">
-                <p>Features</p>
+                 <div class = "align">
+            <p>Features</p>
+            <button class="explore-more" data-modal="modal-naupa">Explore More</button>
+            </div>
                 <ul>
                     <li>Historical exhibits</li>
                     <li>Interactive activities</li>
                     <li>Local cultural preservation</li>
                 </ul>
-                <a href="#" class="more-info">&rarr;</a>
             </div>
         </div>
+        <!-- Modal for Pasilong -->
+    <div id="modal-pasilong" class="modal">
+        <div class="modal-content">
+            <span class="close" data-modal="modal-pasilong">&times;</span>
+            <h3>Pasilong sa Naga</h3>
+            <p>PAsilongggge the serenity of Mount Naupa. Perfect for hiking, camping, and capturing stunning sunrise views. A great spot for outdoor enthusiasts!</p>
+        </div>
+    </div>
+
+        <div class="attraction-card">
+            <h3>Inoburan Mangrove Forest</h3>
+            <p class="price">Free</p>
+            <img src="f2.jpg" alt="Mangrove Forest">
+            <div class="features">
+                <div class = "align">
+            <p>Features</p>
+            <button class="explore-more" data-modal="modal-naupa">Explore More</button>
+            </div>
+                <ul>
+                    <li>Thriving mangrove ecosystem</li>
+                    <li>Serene boardwalk views</li>
+                    <li>Ideal for birdwatching</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Modal for forest -->
+    <div id="modal-forest" class="modal">
+        <div class="modal-content">
+            <span class="close" data-modal="modal-forest">&times;</span>
+            <h3>Inoburan Mangrove Forest</h3>
+            <p>PARTIAAAAAAL ASDHGVSJ FWHXDUFGBC EHFBCSDFBXDHBExperience the serenity of Mount Naupa. Perfect for hiking, camping, and capturing stunning sunrise views. A great spot for outdoor enthusiasts!</p>
+        </div>
+    </div>
     </section>
 
-    <!-- Footer -->
-    <!-- <footer class="bg-dark text-white py-3 text-center">
-        <p>&copy; 2024 Naga City Tourism. All rights reserved.</p>
-    </footer> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="script.js"></script>
+    <script src="attractions.js"></script>
+
 
 
 </body>
