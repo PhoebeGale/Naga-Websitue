@@ -1,0 +1,521 @@
+/* General reset for margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: white;
+  background-color: black;
+}
+
+header {
+  background-color: transparent; /* Set initial background color with lower opacity */
+  /* padding: 25px 20px; */
+  position: fixed; /* Keep the header on top */
+  width: 100%; 
+  height: 75px;
+
+  z-index: 1000; /* Ensure it's above other content */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.navbar {
+  display: flex; /* Flexbox layout for even spacing */
+  justify-content: center;
+  gap: 50px;
+  align-items: center; /* Vertically center items */
+  transition: none;
+  height: 100%
+}
+
+.navbar.scrolled {
+  justify-content: flex-end; /* Align items to the right */
+  padding-right: 50px;
+  transition: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.navbar .brand {
+  padding-left: 50px;
+  position: absolute;
+  left: 20px; /* Keep logo on the left when scrolled */
+}
+
+/* Initially hide the logo */
+.brand {
+  display: none;
+  align-items: center; /* Center logo and text vertically */
+  gap: 10px; /* Add space between logo and text */
+}
+
+.brand img {
+  width: 50px; /* Maintain aspect ratio */
+  height: auto;
+}
+
+.brand .text {
+  display: flex;
+  flex-direction: column; /* Stack text vertically */
+  align-items: flex-start; /* Align text to the left */
+  gap: 10px;
+}
+
+.brand .text p {
+  font-size: 14px; /* Adjust font size for readability */
+  margin: 0; /* Remove default margins */
+  color: white; /* Ensure text color matches */
+}
+
+.brand .text h1 {
+  width: 100%; /* Line spans full width of the text container */
+  height: 1px; /* Make it a thin line */
+  background-color: white; /* Line color */
+  margin: -5px 0; /* Adjust to center between text */
+}
+
+/* .brand p, .brand h1 {
+  margin: 0;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.brand p {
+  font-size: 12px;
+  color: white;
+}
+
+.brand h1 {
+  font-size: 16px;
+  color: white;
+  font-weight: normal;
+  margin: 5px 0;
+} */
+
+/* When scrolled, show the logo */
+.navbar.scrolled .brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar a {
+  text-decoration: none; /* Remove underline from links */
+  font-weight: 450; /* Bold font for visibility */
+  font-size: 13px; /* Adjust font size as needed */
+  color: white; /* Default text color */
+  transition: transform 0.3s ease, color 0.3s ease; /* Only apply hover effects */
+}
+
+/* .navbar a.active {
+  font-weight: 500;
+  color: #ffde59; 
+  transform: scale(1.1); 
+  transition: all 0.3s ease;
+} */
+.navbar a:hover {
+  font-weight: 500;
+  color: #ffde59;
+  transform: scale(1.1); /* Slightly enlarge the text */
+}
+
+/* -------- main content ----------- */
+.about-section {
+  position: relative;
+  height: 400px; /* Adjust as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/officials.png'); /* Path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5; /* Set the desired opacity */
+  z-index: 1; /* Ensures it appears behind the text */
+}
+
+.about-title {
+  position: relative; /* Ensures it is above the pseudo-element */
+  text-align: center;
+  color: white;
+  z-index: 2; /* Places it above the background */
+}
+
+#About-Us {
+  color: #fbd160;
+  font-family: 'Adlery Pro', sans-serif;
+  font-size: 90px;
+  text-shadow: 5px 6px 0px rgba(0, 0, 0, 0.4);
+}
+
+#A-city {
+  color: white;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 20px;
+  text-shadow: 5px 6px 0px rgba(0, 0, 0, 0.4);
+  margin: 0;
+}
+
+.divider {
+  background-color: #fbd160;
+  height: 25px;
+}
+
+.special {
+  background-color: white;
+  padding-top: 70px;
+  padding-bottom: 10px;
+  padding-left: 90px;
+  padding-right: 90px;
+  text-align: center;
+}
+
+.section-title {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 75px;
+  font-style: Normal;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.4);
+  /* font-weight: 700; */
+  color: #164975;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  /* gap: 80px; */
+  /* max-width: 1000px; */
+  height: 100%;
+  margin: 0 auto; /* Center the container */
+  align-items: stretch;
+}
+
+.card {
+  background-color: #fff;
+  /* border: 1px solid #ddd;
+  border-radius: 8px; */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  overflow: hidden;
+  text-align: center;
+  flex: 1; /* Ensure cards take up equal space */
+  max-width: 30%;
+  text-align: left;
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: space-between; /* Push elements to top and bottom */
+  padding: 20px; /* Add padding inside the card */
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 4px solid #636363;
+  border-radius: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.card img:hover {
+  transform: scale(1.1); /* Zoom the image */
+}
+
+
+.card h3 {
+  color: black;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 23px;
+  /* font-weight: 600; */
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding: 0px 10px;
+}
+
+.card p {
+  font-family: 'Montserrat', sans-serif;
+  font-style: light;
+  font-size: 17px;
+  /* letter-spacing: 1.05px; */
+  color: black;
+  margin-bottom: 20px;
+  padding: 0px 10px;
+  flex-grow: 1;
+}
+
+.explore-btn {
+  background: none;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-size: 17px;
+  font-weight: 300;
+  text-transform: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: inline-block;
+  padding: 0px 10px;
+  color: black;
+  text-decoration: none;
+  text-align: left;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.explore-btn:hover {
+  font-weight: 400;
+  color: #0056b3;
+}
+
+.banner {
+  position: relative;
+  background-image: url('images/about-banner.png'); /* Path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px; /* Adjust as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-title {
+  text-align: center;
+  color: white;
+}
+
+#garbo {
+  color: #fff06b;
+  font-family: 'Adlery Pro', sans-serif;
+  font-size: 110px;
+  text-shadow: 5px 6px 0px rgba(0, 0, 0, 0.4);
+}
+
+
+.leadership-section {
+  background-image: linear-gradient(to bottom, #fbd160, white);
+  background-size: cover;
+  background-position: center;
+  height: 780px;
+  padding: 50px 100px;
+  padding-bottom: 30px;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  font-style: light;
+  text-align: justify;
+  font-size: 21px;
+}
+
+/* .first-row {
+  text-align: justify;
+  font-size: 21px;
+} */
+
+.second-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.image-container {
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.round-image {
+  width: 280px; /* Adjust the size as needed */
+  height: auto;
+}
+
+.image-caption {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.name {
+  margin-top: 12px;
+  font-size: 23px;
+}
+
+.position {
+  margin-top: 5px;
+  color: rgb(68, 68, 68);
+  font-size: 15px;
+  font-style: italic;
+}
+
+.text-container {
+  justify-content: space-between;
+  flex: 1;
+  text-align: justify;
+  margin-left: 20px;
+}
+
+#mayor {
+  margin-bottom: 60px; 
+}
+
+#comittee {
+  margin-bottom: 0;
+}
+
+.third-row {
+  margin-top: 50px;
+  text-align: justify;
+}
+
+.visit {
+  position: relative;
+  background-image: url('images/visit-bg.png'); /* Path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 310px; /* Adjust as needed */
+  opacity: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 200px;
+}
+
+.visit-text {
+  text-align: center;
+  color: white;
+}
+
+.visit-text h1 {
+  margin-top: 10px;
+  color: #164975;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 50px;
+  text-shadow: 3px 3px 0px rgb(255, 255, 255);
+}
+
+.visit-text p {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-style: light;
+  font-size: 25px;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
+  margin-top: 20px;
+}
+
+.visit-text a {
+  background: none;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  margin-top: 30px;
+}
+
+.visit-text a:hover {
+  font-weight: 400;
+  color: #fbd160;
+}
+
+
+
+  /* #Get-to-know {
+    position: absolute;
+    top: 100px;
+    left: 770px;
+    color: #ffde59;
+    font-family: 'Adlery Pro', sans-serif;              
+    font-size: 90px;
+    font-style: Normal;
+    text-shadow: 5px 6px 0px rgba(0, 0, 0, 0.4); 
+    transform: rotate(-5deg);
+  }
+  #NAGA {
+    position: absolute;
+    top: 210px;
+    left: 870px;
+    color: #fff06b;
+    font-family: "League Spartan", sans-serif;
+    font-size: 150px;
+    font-style: Normal;
+    text-shadow: 9px 9px 0px rgba(0, 0, 0, 0.4); 
+  } */
+  
+.footer {
+  background-color: #164975;
+  display: flex; /* Enable flexbox for the footer */
+  justify-content: center; /* Distribute the sections horizontally */
+  align-items: center; 
+  padding: 50px;
+  width: 100%; 
+  gap: 50px;
+  font-family: "League Spartan", sans-serif;
+  height: 100%;
+  margin: 0;
+  
+}
+
+.logos {
+  display: flex; /* Flexbox for logos */
+  flex-direction: row; /* Align logos horizontally */
+  align-items: center; 
+  gap: 15px; /* Space between logos */
+}
+
+
+.logoc {
+  width: 60px;
+}
+  
+.Naga-bisitac {
+  padding-top: 2px;
+  width: 80px
+}
+
+.Love-ph {
+  padding-top: 10px;
+  width: 100px
+}
+
+.contacts {
+  display: flex; 
+  flex-direction: row; 
+  align-items: center; 
+  gap: 25px; 
+}
+
+.footer p {
+  font-size: 25px;
+  letter-spacing: 4px;
+  font-weight: 600;
+}
+
+.footer i {
+  font-size: 30px;
+  color: white;
+  /* text-shadow: 2px 2px 3px black; */
+}
+
+/* Hover effect for icon */
+.footer i:hover {
+  transform: scale(1.1); 
+  color: #ffde59; 
+}
