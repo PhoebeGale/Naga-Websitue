@@ -96,3 +96,7 @@ function initializeCarousel(modalId) {
 // Initialize carousels for all modals
 initializeCarousel('modal-naupa');
 initializeCarousel('modal-board');
+initializeCarousel('modal-Peak');
+initializeCarousel('modal-museo');
+initializeCarousel('modal-pasilong');
+initializeCarousel('modal-park');

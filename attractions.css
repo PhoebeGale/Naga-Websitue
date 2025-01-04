@@ -256,6 +256,11 @@ header {
     background-color: #f9f9f9;
     transition: all 0.3s ease-in-out;
 }
+@media (max-width: 768px) {
+    .attractions {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
 
 .attraction-card {
     background: white;
@@ -380,33 +385,15 @@ h3 {
 
 .slides img {
   width: 100%;
-  height: 100%;
+  height: 550px;
   object-fit: cover;
+  object-position: bottom;
   display: none;
 }
 
 .slides img.active {
   display: block;
 }
-
-.carousel-text {
-  position: absolute;
-  bottom: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  text-align: center;
-}
-
-.carousel-text h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-
-.carousel-text p {
-  font-size: 1.2rem;
-}
-
 /* Dots */
 .dots {
   position: absolute;
@@ -462,6 +449,12 @@ h3 {
   color: #555;
 }
 /* Positioning for the text overlay */
+.text-overlay h2,
+.text-overlay p {
+    color: white; /* Or a contrasting color of your choice */
+    font-weight: bold; /* Optional: Make the text stand out more */
+}
+
 .text-overlay {
   position: absolute;
   top: 50%;
@@ -471,30 +464,15 @@ h3 {
   color: white;
   font-family: Arial, sans-serif;
   display: none;  /* Hide text by default */
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /* Add shadow for clarity */
 }
-
+}
 .slides {
   position: relative;
 }
 
-/* Show text overlay only when m6.jpg is active */
-.slides img.active + .text-overlay {
-  display: block;
 }
-.carousel {
-object-fit: contain;
-object-position: bottom;
-  width: 100%;
-  height: 400px; /* Adjust this value based on how much height you want */
-  overflow: hidden; /* Prevents any image overflow from showing */
-}
-.carousel img[src="w3.jpg"] {
-  object-fit: contain;  /* Ensures the entire image is visible */
-  object-position: bottom; /* Aligns the image to the bottom of the container */
-  width: 100%; /* Makes the image fill the container width */
-  height: 100%; /* Adjusts the height to fill the container */
-}
-
 
 /* Responsive */
 @media (max-width: 768px) {
