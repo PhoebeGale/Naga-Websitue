@@ -395,6 +395,12 @@ video {
   /* font-weight: 450; */
 }
 
+.Gov-ph a:hover {
+  color: #ffd700; /* Change text color */
+  text-decoration: none; /* Adds an underline */
+  transition: color 0.3s ease;
+}
+
 .Gov-link {
   padding-top: 30px; /* Padding inside the section */
 }
@@ -412,6 +418,12 @@ video {
   font-family: "Montserrat", sans-serif;
   /* font-weight: 500; */
   line-height: 23px;
+}
+
+.Gov-link a:hover {
+  color: #ffd700; /* Change text color */
+  text-decoration: none; /* Adds an underline */
+  transition: color 0.3s ease;
 }
 
 
@@ -467,9 +479,16 @@ video {
   color: #007bff; 
 } */
 
-.contact-item p {
+.contact-item a {
   color: white;
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
   margin: 0;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  color: #ffd700; /* Change text color */
+  text-decoration: none; /* Adds an underline */
+  transition: color 0.3s ease;
 }
