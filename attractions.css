@@ -395,6 +395,35 @@ h3 {
 .slides img.active {
   display: block;
 }
+/* Full-Image Modal */
+.full-image-modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.full-image-modal .modal-content {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.full-image-modal .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 /* Dots */
 .dots {
   position: absolute;
@@ -442,8 +471,11 @@ h3 {
   padding: 20px;
   font-size: 1.1rem;
   color: #333;
-}
 
+}
+.modal-description p {
+text-align: justify;
+}
 .modal-description blockquote {
   margin-top: 10px;
   font-style: italic;
@@ -474,6 +506,7 @@ h3 {
 }
 
 }
+
 
 /* Responsive */
 @media (max-width: 768px) {

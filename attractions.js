@@ -100,3 +100,17 @@ initializeCarousel('modal-Peak');
 initializeCarousel('modal-museo');
 initializeCarousel('modal-pasilong');
 initializeCarousel('modal-park');
+initializeCarousel('modal-church');
+initializeCarousel('modal-villa');
+
+function viewFullImage(image, modalId) {
+  const modal = document.getElementById(modalId);
+  const modalImage = modal.querySelector('.modal-content');
+  modal.style.display = "flex";
+  modalImage.src = image.src;
+}
+
+function closeFullImage(modalId) {
+  const modal = document.getElementById(modalId);
+  modal.style.display = "none";
+}

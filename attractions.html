@@ -86,17 +86,22 @@
   <div class="modal-content">
     <!-- Close button -->
     <span class="close" data-modal="modal-naupa">&times;</span>
+    <!-- Full-Image Modal -->
+<div class="full-image-modal" id="imageModal1">
+  <span class="close" onclick="closeFullImage('imageModal1')">&times;</span>
+  <img class="modal-content" id="fullImage1" src="" alt="Full Image">
+</div>
 
     <!-- Image Carousel -->
     <div class="carousel">
       <div class="slides">
-        <img src="m6.jpg" class="active" alt="Discover Mount Naupa">
-        <img src="m1.jpg" alt="Mount Naupa View">
-        <img src="m2.jpg" alt="Nature at Mount Naupa">
-        <img src="m3.jpg" alt="Trail at Mount Naupa">
-        <img src="m4.jpg">
-        <img src="m5.jpg">
-        <img src="m7.jpg">
+        <img src="m6.jpg" class="active" alt="Discover Mount Naupa" onclick="viewFullImage(this, 'imageModal1')">
+        <img src="m1.jpg" alt="Mount Naupa View" onclick="viewFullImage(this, 'imageModal1')">
+        <img src="m2.jpg" alt="Nature at Mount Naupa" onclick="viewFullImage(this, 'imageModal1')">
+        <img src="m3.jpg" alt="Trail at Mount Naupa" onclick="viewFullImage(this, 'imageModal1')">
+        <img src="m4.jpg" onclick="viewFullImage(this, 'imageModal1')">
+        <img src="m5.jpg" onclick="viewFullImage(this, 'imageModal1')">
+        <img src="m7.jpg" onclick="viewFullImage(this, 'imageModal1')">
           <!-- Text Overlay for m6.jpg -->
     <div class="text-overlay">
       <h2>Discover Mount Naupa</h2>
@@ -149,15 +154,19 @@
   <div class="modal-content">
     <!-- Close button -->
     <span class="close" data-modal="modal-board">&times;</span>
+<div class="full-image-modal" id="imageModal2">
+  <span class="close" onclick="closeFullImage('imageModal2')">&times;</span>
+  <img class="modal-content" id="fullImage2" src="" alt="Full Image">
+</div>
 
     <!-- Image Carousel -->
     <div class="carousel">
       <div class="slides">
-        <img src="pink1.jpg" class="active" alt="Naga Boardwalk Overview">
-        <img src="w2.jpg" alt="Sunset by the Bay">
-        <img src="w3.jpg" alt="Boardwalk Activities">
-        <img src="w4.jpg" alt="Relaxation Areas">
-        <img src="w6.jpg">
+        <img src="pink1.jpg" class="active" alt="Naga Boardwalk Overview" onclick="viewFullImage(this, 'imageModal2')">
+        <img src="w2.jpg" alt="Sunset by the Bay" onclick="viewFullImage(this, 'imageModal2')">
+        <img src="w3.jpg" alt="Boardwalk Activities" onclick="viewFullImage(this, 'imageModal2')">
+        <img src="w4.jpg" alt="Relaxation Areas" onclick="viewFullImage(this, 'imageModal2')">
+        <img src="w6.jpg" onclick="viewFullImage(this, 'imageModal2')">
 
         <!-- Text Overlay for w5.jpg -->
         <div class="text-overlay">
@@ -208,16 +217,20 @@
   <div class="modal-content">
     <!-- Close button -->
     <span class="close" data-modal="modal-Peak">&times;</span>
-
+<!-- Full-Image Modal -->
+<div class="full-image-modal" id="imageModal3">
+  <span class="close" onclick="closeFullImage('imageModal3')">&times;</span>
+  <img class="modal-content" id="fullImage3" src="" alt="Full Image">
+</div>
     <!-- Image Carousel -->
     <div class="carousel">
       <div class="slides">
-        <img src="pk4.jpg" class="active" alt="Peak">
-        <img src="pk1.jpg">
-        <img src="pk7.jpg">
-        <img src="pk3.jpg">
-        <img src="pk5.jpg">
-        <img src="pk6.jpg">
+        <img src="pk4.jpg" class="active" alt="Peak" onclick="viewFullImage(this, 'imageModal3')">
+        <img src="pk1.jpg" onclick="viewFullImage(this, 'imageModal3')">
+        <img src="pk7.jpg" onclick="viewFullImage(this, 'imageModal3')">
+        <img src="pk3.jpg" onclick="viewFullImage(this, 'imageModal3')">
+        <img src="pk5.jpg" onclick="viewFullImage(this, 'imageModal3')">
+        <img src="pk6.jpg" onclick="viewFullImage(this, 'imageModal3')">
 
         <!-- Text Overlay for w5.jpg -->
         <div class="text-overlay">
@@ -269,15 +282,20 @@
   <div class="modal-content">
     <!-- Close button -->
     <span class="close" data-modal="modal-museo">&times;</span>
+<!-- Full-Image Modal -->
+<div class="full-image-modal" id="imageModal4">
+  <span class="close" onclick="closeFullImage('imageModal4')">&times;</span>
+  <img class="modal-content" id="fullImage4" src="" alt="Full Image">
+</div>
 
     <!-- Image Carousel -->
     <div class="carousel">
       <div class="slides">
-        <img src="s8.jpg" class="active" alt="Museo">
-        <img src="s2.jpg">
-        <img src="s3.jpg">
-        <img src="s4.jpg">
-        <img src="s5.jpg">
+        <img src="s8.jpg" class="active" alt="Museo" onclick="viewFullImage(this, 'imageModal4')">
+        <img src="s2.jpg" onclick="viewFullImage(this, 'imageModal4')">
+        <img src="s3.jpg" onclick="viewFullImage(this, 'imageModal4')">
+        <img src="s4.jpg" onclick="viewFullImage(this, 'imageModal4')">
+        <img src="s5.jpg" onclick="viewFullImage(this, 'imageModal4')">
 
         <div class="text-overlay">
           <h2>Explore Museo Naga</h2>
@@ -327,13 +345,17 @@
   <div class="modal-content">
     <!-- Close button -->
     <span class="close" data-modal="modal-pasilong">&times;</span>
-
+<!-- Full-Image Modal -->
+<div class="full-image-modal" id="imageModal5">
+  <span class="close" onclick="closeFullImage('imageModal5')">&times;</span>
+  <img class="modal-content" id="fullImage5" src="" alt="Full Image">
+</div>
     <!-- Image Carousel -->
     <div class="carousel">
       <div class="slides">
-        <img src="pa3.jpg" class="active" alt="Pasilong sa Naga">
-        <img src="pa2.jpg">
-        <img src="pa4.jpg">
+        <img src="pa3.jpg" class="active" alt="Pasilong sa Naga" onclick="viewFullImage(this, 'imageModal5')">
+        <img src="pa2.jpg" onclick="viewFullImage(this, 'imageModal5')">
+        <img src="pa4.jpg" onclick="viewFullImage(this, 'imageModal5')">
 
         <div class="text-overlay">
           <h2>Explore Pasilong Sa Naga</h2>
@@ -365,7 +387,7 @@
 </div>
     <div class="attraction-card">
             <h3>Blu-pool Resort</h3>
-            <p class="price">100 Adult / 75 Kids</p>
+            <p class="price">100 Adults / 75 Kids</p>
             <img src="p1.jpg" alt="Waterpark">
             <div class="features">
                 <div class = "align">
@@ -384,18 +406,22 @@
   <div class="modal-content">
     <!-- Close button -->
     <span class="close" data-modal="modal-park">&times;</span>
-
+<!-- Full-Image Modal -->
+<div class="full-image-modal" id="imageModal6">
+  <span class="close" onclick="closeFullImage('imageModal6')">&times;</span>
+  <img class="modal-content" id="fullImage6" src="" alt="Full Image">
+</div>
     <!-- Image Carousel -->
     <div class="carousel">
       <div class="slides">
-        <img src="p2.jpg" class="active" alt="Waterpark">
-        <img src="p3.jpg">
-        <img src="p4.jpg">
-        <img src="p5.jpg">
-        <img src="p6.jpg">
-        <img src="p7.jpg">
-        <img src="p8.jpg">
-        <img src="p9.jpg">
+        <img src="p2.jpg" class="active" alt="Waterpark" onclick="viewFullImage(this, 'imageModal6')">
+        <img src="p3.jpg" onclick="viewFullImage(this, 'imageModal6')" >
+        <img src="p4.jpg" onclick="viewFullImage(this, 'imageModal6')">
+        <img src="p5.jpg" onclick="viewFullImage(this, 'imageModal6')">
+        <img src="p6.jpg" onclick="viewFullImage(this, 'imageModal6')">
+        <img src="p7.jpg" onclick="viewFullImage(this, 'imageModal6')">
+        <img src="p8.jpg" onclick="viewFullImage(this, 'imageModal6')">
+        <img src="p9.jpg" onclick="viewFullImage(this, 'imageModal6')">
 
         <div class="text-overlay">
           <h2>Blu-Pool Waterpark Resort</h2>
@@ -429,7 +455,7 @@
 </div>
     <div class="attraction-card">
             <h3>Archdiocesan Shrine</h3>
-            <p class="price">100 Adult / 75 Kids</p>
+            <p class="price">Free</p>
             <img src="c1.jpg" alt="Church">
             <div class="features">
                 <div class = "align">
@@ -437,9 +463,9 @@
             <button class="explore-more" data-modal="modal-church">Explore More</button>
             </div>
                 <ul>
-                    <li>Affordable Rates</li>
-                    <li>Family-Friendly Facilities</li>
-                    <li>Convenient Location</li>
+                    <li>Historic Architecture</li>
+                    <li>Cultural Significance</li>
+                    <li>Religious Celebrations</li>
                 </ul>
             </div>
         </div>
@@ -448,22 +474,23 @@
   <div class="modal-content">
     <!-- Close button -->
     <span class="close" data-modal="modal-church">&times;</span>
-
+<!-- Full-Image Modal -->
+<div class="full-image-modal" id="imageModal7">
+  <span class="close" onclick="closeFullImage('imageModal7')">&times;</span>
+  <img class="modal-content" id="fullImage7" src="" alt="Full Image">
+</div>
     <!-- Image Carousel -->
     <div class="carousel">
       <div class="slides">
-        <img src="p2.jpg" class="active" alt="Waterpark">
-        <img src="p3.jpg">
-        <img src="p4.jpg">
-        <img src="p5.jpg">
-        <img src="p6.jpg">
-        <img src="p7.jpg">
-        <img src="p8.jpg">
-        <img src="p9.jpg">
+        <img src="c3.jpg" class="active" alt="Naga Church" onclick="viewFullImage(this, 'imageModal7')">
+        <img src="c2.jpg" onclick="viewFullImage(this, 'imageModal7')">
+        <img src="c5.jpg" onclick="viewFullImage(this, 'imageModal7')">
+        <img src="c6.jpg" onclick="viewFullImage(this, 'imageModal7')">
+          <img src="c7.jpg" onclick="viewFullImage(this, 'imageModal7')">
 
         <div class="text-overlay">
-          <h2>Blu-Pool Waterpark Resort</h2>
-          <p>Dive into Fun and Adventure at Naga City's Premier Waterpark</p>
+          <h2>Archdiocesan Shrine of St. Francis of Assisi</h2>
+          <p>A Historic Sanctuary of Faith and Culture</p>
         </div>
       </div>
 
@@ -478,16 +505,74 @@
         <span data-slide="2" class="dot"></span>
         <span data-slide="3" class="dot"></span>
         <span data-slide="4" class="dot"></span>
-        <span data-slide="5" class="dot"></span>
-        <span data-slide="6" class="dot"></span>
-        <span data-slide="7" class="dot"></span>
       </div>
     </div>
 
     <!-- Description below the image -->
     <div class="modal-description">
-      <p> Blu-Pool Waterpark, located within Guanzon Beach Resort in Naga City, Cebu, is the first water park in southern Cebu. This family-friendly destination offers a variety of amenities, including affordable entrance fees, scenic pool areas, and comfortable cottages. It's an ideal spot for a fun-filled day of swimming and relaxation, with beautiful views of the surrounding area.</p>
-      <blockquote>"Dive into fun and adventure at Blu-Pool Waterpark."</blockquote>
+      <p> The Archdiocesan Shrine of St. Francis of Assisi, located in Naga City, Cebu, is a historic church known for its unique Baroque-style architecture that blends Mexican and Filipino religious designs. Established in the 19th century, the church has been a central part of the community, offering a place of worship and cultural significance. The church features intricate designs, a beautiful bell tower, and hosts annual celebrations, including the feast of St. Francis of Assisi every October 10.</p>
+      <blockquote>"A place where history, faith, and community converge"</blockquote>
+    </div>
+  </div>
+</div>
+      <div class="attraction-card">
+            <h3>Villa Dulce Resort</h3>
+            <p class="price">100 Adults / 50 kids</p>
+            <img src="mp1.jpg" alt="Villa Dulce">
+            <div class="features">
+                <div class = "align">
+            <p>Features</p>
+            <button class="explore-more" data-modal="modal-villa">Explore More</button>
+            </div>
+                <ul>
+                    <li>Scenic Location</li>
+                    <li>Swimming Pools</li>
+                    <li>Event Facilities</li>
+                </ul>
+            </div>
+        </div>
+<!-- Modal Structure -->
+<div id="modal-villa" class="modal">
+  <div class="modal-content">
+    <!-- Close button -->
+    <span class="close" data-modal="modal-villa">&times;</span>
+<!-- Full-Image Modal -->
+<div class="full-image-modal" id="imageModal8">
+  <span class="close" onclick="closeFullImage('imageModal8')">&times;</span>
+  <img class="modal-content" id="fullImage8" src="" alt="Full Image">
+</div>
+
+    <!-- Image Carousel -->
+    <div class="carousel">
+      <div class="slides">
+        <img src="mp9.jpg" class="active" alt="Naga Church" onclick="viewFullImage(this, 'imageModal8')">
+        <img src="mp3.jpg" onclick="viewFullImage(this, 'imageModal8')">
+        <img src="mp7.jpg" onclick="viewFullImage(this, 'imageModal8')">
+          <img src="mp8.jpg" onclick="viewFullImage(this, 'imageModal8')">
+
+        <div class="text-overlay">
+          <h2>Discover Villa Dulce Resort</h2>
+          <p>Relax and Enjoy Nature's Beauty</p>
+        </div>
+      </div>
+
+      <!-- Navigation Arrows -->
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+
+      <!-- Dots for navigation -->
+      <div class="dots">
+        <span data-slide="0" class="dot active"></span>
+        <span data-slide="1" class="dot"></span>
+        <span data-slide="2" class="dot"></span>
+        <span data-slide="3" class="dot"></span>
+      </div>
+    </div>
+
+    <!-- Description below the image -->
+    <div class="modal-description">
+      <p> Nestled in the lush greenery of Barangay Pangdan, Villa Dulce Resort in Naga City, Cebu, offers a perfect getaway for those seeking a peaceful retreat. The resort features luxurious amenities, including two swimming pools, comfortable villas, and a spacious function hall, making it an ideal destination for family gatherings, social events, or a relaxing vacation. Surrounded by mango and coconut trees, guests can enjoy the serene environment and scenic views, providing a refreshing escape from the city's hustle and bustle.</p>
+      <blockquote>"Relax by the pool and embrace the mountain serenity at Villa Dulce Resort"</blockquote>
     </div>
   </div>
 </div>
