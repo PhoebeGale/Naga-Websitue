@@ -1,0 +1,572 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #000; /* Ensures full background blends with dark design */
+    color: #fff;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* ---------- Header ------------- */
+
+header {
+    background-color: transparent; /* Set initial background color with lower opacity */
+    /* padding: 25px 20px; */
+    position: fixed; /* Keep the header on top */
+    width: 100%; 
+    height: 75px;
+    
+    z-index: 1000; /* Ensure it's above other content */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+  
+.navbar {
+    display: flex; /* Flexbox layout for even spacing */
+    justify-content: center;
+    gap: 50px;
+    align-items: center; /* Vertically center items */
+    transition: none;
+    height: 100%
+}
+  
+.navbar.scrolled {
+    justify-content: flex-end; /* Align items to the right */
+    padding-right: 50px;
+    transition: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+  
+.navbar .brand {
+    padding-left: 50px;
+    position: absolute;
+    left: 20px; /* Keep logo on the left when scrolled */
+}
+  
+/* Initially hide the logo */
+.brand {
+    display: none;
+    align-items: center; /* Center logo and text vertically */
+    gap: 10px; /* Add space between logo and text */
+}
+  
+.brand img {
+    width: 50px; /* Maintain aspect ratio */
+    height: auto;
+}
+  
+.brand .text {
+    display: flex;
+    flex-direction: column; /* Stack text vertically */
+    align-items: flex-start; /* Align text to the left */
+    gap: 10px;
+}
+  
+.brand .text p {
+    font-size: 14px; /* Adjust font size for readability */
+    margin: 0; /* Remove default margins */
+    color: white; /* Ensure text color matches */
+}
+  
+.brand .text h1 {
+    width: 100%; /* Line spans full width of the text container */
+    height: 1px; /* Make it a thin line */
+    background-color: white; /* Line color */
+    margin: -5px 0; /* Adjust to center between text */
+}
+
+/* When scrolled, show the logo */
+  .navbar.scrolled .brand {
+    display: flex;
+    align-items: center;
+}
+  
+.navbar a {
+    text-decoration: none; /* Remove underline from links */
+    font-weight: 450; /* Bold font for visibility */
+    font-size: 13px; /* Adjust font size as needed */
+    color: white; /* Default text color */
+    transition: transform 0.3s ease, color 0.3s ease; /* Only apply hover effects */
+}
+ 
+.navbar a:hover {
+    font-weight: 500;
+    color: #ffde59;
+    transform: scale(1.1); /* Slightly enlarge the text */
+}
+  
+/* ------------ Page 1 --------------*/
+
+/* MAIN SECTION */
+.page-1 {
+    position: relative;
+    height: 140vh;
+    background: url('Naga_Cebu/_events_page_bg.jpg') no-repeat center center/cover; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30px;
+    text-align: left;
+}
+
+.page-title h2 {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 60px;
+    font-style: Normal;
+    color: #ffde59;
+    text-align: center;
+    position: relative; 
+    top: -240px; /* Adjust this value to position it below the header */
+    left: 50%; /* Start at the middle */
+    transform: translateX(-50%); /* Center horizontally */
+    margin: 0; /* Remove default margins if needed */
+}
+
+.page-title h1 {
+    font-family: 'Adlery Pro', sans-serif;
+    font-size: 100px;
+    color: white;
+    text-shadow: #000;
+    text-align: center;
+    position: relative; 
+    top: -290px; /* Adjust this value to position it below the header */
+    left: 50%; /* Start at the middle */
+    transform: translateX(-50%); /* Center horizontally */
+    margin: 0; /* Remove default margins if needed */
+    text-transform: none;
+}
+
+.page-title p {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    color: black;
+    text-align: center;
+    position: relative; 
+    bottom: -310px; /* Adjust this value to position it below the header */
+    left: 50%; /* Start at the middle */
+    transform: translateX(-50%); /* Center horizontally */
+    margin: 0; /* Remove default margins if needed */
+}
+
+/* SLIDER SECTION */
+/* Explore Button */
+.explore-btn .btn {
+    top: 387px;
+    right: 295px;
+    display: inline-block;
+    background-color: #FFD700;
+    color: #000;
+    padding: 10px 10px;
+    padding-top: 3px;
+    font-weight: 400;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin-left: 60px;
+    height: 30px;
+    position: absolute;
+}
+
+.explore-btn .btn:hover {
+    background-color: blue;
+    color: white;
+}
+
+.slider-container {
+    position: absolute;
+    top: 427px;
+    right: 20px;
+    width: 400px; /* Adjusted width */
+    height: 300px; /* Added height */
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #fff; /* Added border width and color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: relative;
+    width: 100%; /* Ensure slide takes full width */
+    height: 100%; /* Ensure slide takes full height */
+}
+
+.slide img {
+    width: 100%;
+    height: 100%; /* Ensures image fills the slide */
+    object-fit: cover; /* Maintains aspect ratio */
+    display: block;
+}
+
+/* Style the slides to ensure they fit the container */
+.slide {
+    position: relative;
+    min-width: 100%;
+    height: 100%;
+}
+
+/* Optional: hover effect to make text box darker */
+.slide:hover .text-box {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay on hover */
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white; /* Solid blue background with higher opacity */
+    color: black; /* White text for contrast */
+    border: none;
+    padding: 0px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 40px;
+    z-index: 2;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+    transition: background 0.3s ease, transform 0.3s ease; /* Smooth hover transition */
+}
+
+.slider-button:hover {
+    background: yellow; /* Darker shade on hover */
+    transform: translateY(-50%) scale(1.1); /* Slight scale effect on hover */
+    color: black;
+}
+
+.prev {
+    left: -10px;
+}
+
+.next {
+    right: -10px;
+}
+
+/* Box for text */
+.text-box {
+    position: absolute;
+    bottom: 0%;  /* Adjust as necessary */
+    left: 0%;    /* Adjust as necessary */
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%; /* Adjust width as needed */
+    text-align: center; /* Center text */
+    z-index: 2; /* Ensure it's on top of the images */
+}
+
+/* Text inside the .text-box */
+.text-box h3 {
+    font-size: 24px; /* Adjust title size */
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+.text-box p {
+    font-size: 16px; /* Adjust description size */
+    margin: 0;
+}
+
+
+
+/* ------------ Page 2 --------------*/
+
+.page-2 {
+    position: relative;
+    height: 100vh;
+    background: url('Naga_Cebu/_events_page2_bg.jpg') no-repeat center center/cover; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30px;
+}
+
+.page-2 h1{
+    font-family: 'Adlery Pro', sans-serif;
+    font-size: 150px;
+    color: white;
+    text-shadow: #000;
+    offset: 50%;
+    text-align: center;
+    position: relative; 
+    top: -50px; /* Adjust this value to position it below the header */
+    left: 50%; /* Start at the middle */
+    transform: translateX(-50%); /* Center horizontally */
+    margin: 0; /* Remove default margins if needed */
+    text-transform: none;
+}
+
+
+/* ------------ Page 3 --------------*/
+
+.page-3 {
+    position: relative;
+    height: 480vh;
+    background: url('Naga_Cebu/_events_page3_bg.jpg') no-repeat center center/cover; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30px;
+    text-align: left;
+}
+
+.event-1 {
+    position: absolute; /* Ensures precise placement */
+    left: 50%; /* Centers horizontally */
+    transform: translateX(-50%); /* Adjusts for width centering */
+    top: 50px; /* Brings the section closer to the top */
+    height: 100vh; /* Reduces the height to half the viewport */
+    background-image: url('Naga_Cebu/_event1_bg.png'); /* Background image */
+    background-size: cover; /* Makes the image cover the div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    width: 90%; /* Limits the width, adding space on the sides */
+    max-width: 1200px; /* Caps the maximum width */
+    overflow: hidden; /* Ensures no content spills out */
+    border-radius: 10px; /* Optional: Adds rounded corners for a polished look */
+}
+
+.event1-photo {
+    display: flex;
+    position: absolute;
+    right: -2%;
+    top: 40px;
+    height: 90vh;
+    width: 50%;
+    overflow: hidden;
+}
+
+.details-event1 {
+    position: absolute;
+    left: 10%; /* Position text slightly away from the container's left edge */
+    top: 40px; /* Maintain top positioning */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; /* Align all child elements to the left */
+    text-align: left; /* Ensure the text itself is aligned left */
+    margin: 0; /* Remove any unintended margins */
+    padding: 0; /* Remove unintended padding */
+    width: 45%; /* Set width to ensure proper spacing from the photo */
+}
+
+.details-event1 h1 {
+    font-family: 'League Spartan', sans-serif;
+    letter-spacing: 5px;
+    line-height: 55px;
+    padding-bottom: 20px;
+    font-size: 50px;
+}
+
+.event-2 {
+    position: absolute; /* Ensures precise placement */
+    left: 50%; /* Centers horizontally */
+    transform: translateX(-50%); /* Adjusts for width centering */
+    top: 800px; /* Brings the section closer to the top */
+    height: 100vh; /* Reduces the height to half the viewport */
+    background-image: url('Naga_Cebu/_event1_bg.png'); /* Background image */
+    background-size: cover; /* Makes the image cover the div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    width: 90%; /* Limits the width, adding space on the sides */
+    max-width: 1200px; /* Caps the maximum width */
+    overflow: hidden; /* Ensures no content spills out */
+    border-radius: 10px; /* Optional: Adds rounded corners for a polished look */
+}
+
+.event2-photo {
+    display: flex;
+    position: absolute;
+    right: -2%;
+    top: 40px;
+    height: 90vh;
+    width: 50%;
+    overflow: hidden;
+}
+
+.details-event2 {
+    position: absolute;
+    left: 2%; /* Position text slightly away from the container's left edge */
+    top: 40px; /* Maintain top positioning */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; /* Align all child elements to the left */
+    text-align: left; /* Ensure the text itself is aligned left */
+    margin: 0; /* Remove any unintended margins */
+    padding: 0; /* Remove unintended padding */
+    width: 45%; /* Set width to ensure proper spacing from the photo */
+}
+
+.event-3 {
+    position: absolute; /* Ensures precise placement */
+    left: 50%; /* Centers horizontally */
+    transform: translateX(-50%); /* Adjusts for width centering */
+    top: 1550px; /* Brings the section closer to the top */
+    height: 100vh; /* Reduces the height to half the viewport */
+    background-image: url('Naga_Cebu/_event1_bg.png'); /* Background image */
+    background-size: cover; /* Makes the image cover the div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    width: 90%; /* Limits the width, adding space on the sides */
+    max-width: 1200px; /* Caps the maximum width */
+    overflow: hidden; /* Ensures no content spills out */
+    border-radius: 10px; /* Optional: Adds rounded corners for a polished look */
+}
+
+.event3-photo {
+    display: flex;
+    position: absolute;
+    right: -2%;
+    top: 40px;
+    height: 90vh;
+    width: 50%;
+    overflow: hidden;
+}
+
+.details-event3 {
+    position: absolute;
+    left: 2%; /* Position text slightly away from the container's left edge */
+    top: 40px; /* Maintain top positioning */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; /* Align all child elements to the left */
+    text-align: left; /* Ensure the text itself is aligned left */
+    margin: 0; /* Remove any unintended margins */
+    padding: 0; /* Remove unintended padding */
+    width: 45%; /* Set width to ensure proper spacing from the photo */
+}
+
+.event-4 {
+    position: absolute; /* Ensures precise placement */
+    left: 50%; /* Centers horizontally */
+    transform: translateX(-50%); /* Adjusts for width centering */
+    top: 2300px; /* Brings the section closer to the top */
+    height: 100vh; /* Reduces the height to half the viewport */
+    background-image: url('Naga_Cebu/_event1_bg.png'); /* Background image */
+    background-size: cover; /* Makes the image cover the div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    width: 90%; /* Limits the width, adding space on the sides */
+    max-width: 1200px; /* Caps the maximum width */
+    overflow: hidden; /* Ensures no content spills out */
+    border-radius: 10px; /* Optional: Adds rounded corners for a polished look */
+}
+
+.event4-photo {
+    display: flex;
+    position: absolute;
+    right: -2%;
+    top: 40px;
+    height: 90vh;
+    width: 50%;
+    overflow: hidden;
+}
+
+.details-event4 {
+    position: absolute;
+    left: 2%; /* Position text slightly away from the container's left edge */
+    top: 40px; /* Maintain top positioning */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; /* Align all child elements to the left */
+    text-align: left; /* Ensure the text itself is aligned left */
+    margin: 0; /* Remove any unintended margins */
+    padding: 0; /* Remove unintended padding */
+    width: 45%; /* Set width to ensure proper spacing from the photo */
+}
+
+.orange_wave {
+    position: absolute; /* Ensures precise placement */
+    left: 50%; /* Centers horizontally */
+    transform: translateX(-50%); /* Adjusts for width centering */
+    top: 2890px; /* Brings the section closer to the top */
+    height: 40vh; /* Reduces the height to half the viewport */
+    background-image: url('Naga_Cebu/_orange_waves.png'); /* Background image */
+    background-size: cover; /* Makes the image cover the div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    width: 130%; /* Limits the width, adding space on the sides */
+    overflow: hidden; /* Ensures no content spills out */
+    z-index: 2px;
+}
+
+.ending-text h1 {
+    font-family: 'Adlery Pro', sans-serif;
+    font-size: 80px;
+    font-style: normal;
+    color: white;
+    text-shadow: black;
+    text-align: center;
+    line-height: 90%;
+    position: relative; 
+    bottom: -1590px; /* Adjust this value to position it below the header */
+    left: 50%; /* Start at the middle */
+    transform: translateX(-50%); /* Center horizontally */
+    margin: 0; /* Remove default margins if needed */
+}
+
+.ending-text p {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 30px;
+    font-style: 100;
+    color: white;
+    text-align: center;
+    position: relative; 
+    bottom: -1630px; /* Adjust this value to position it below the header */
+    left: 50%; /* Start at the middle */
+    transform: translateX(-50%); /* Center horizontally */
+    margin: 0; /* Remove default margins if needed */
+}
+
+
+/* ------------ Page 4 --------------*/
+
+.page-4 {
+    position: relative;
+    height: 20vh; 
+    background-color: #668198; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30px;
+    text-align: center;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
