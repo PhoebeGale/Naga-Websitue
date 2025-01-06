@@ -13,27 +13,28 @@ body {
 }
 header {
   background-color: transparent; /* Set initial background color with lower opacity */
-  padding: 25px 20px;
+  /* padding: 25px 20px; */
   position: fixed; /* Keep the header on top */
   width: 100%;
-  height: 70px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  height: 75px;
+
   z-index: 1000; /* Ensure it's above other content */
   transition: background-color 0.3s ease; /* Smooth transition */
 }
-
 .navbar {
   display: flex; /* Flexbox layout for even spacing */
   justify-content: center;
   gap: 50px;
   align-items: center; /* Vertically center items */
   transition: none;
+  height: 100%
 }
 
 .navbar.scrolled {
   justify-content: flex-end; /* Align items to the right */
   padding-right: 50px;
   transition: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
 .navbar .brand {
@@ -45,27 +46,47 @@ header {
 /* Initially hide the logo */
 .brand {
   display: none;
+  align-items: center; /* Center logo and text vertically */
+  gap: 10px; /* Add space between logo and text */
 }
 
-/* When scrolled, show the logo */
+.brand img {
+  width: 50px; /* Maintain aspect ratio */
+  height: auto;
+}
+
+.brand .text {
+  display: flex;
+  flex-direction: column; /* Stack text vertically */
+  align-items: flex-start; /* Align text to the left */
+  gap: 10px;
+}
+
+.brand .text p {
+  font-size: 14px; /* Adjust font size for readability */
+  margin: 0; /* Remove default margins */
+  color: white; /* Ensure text color matches */
+}
+
+.brand .text h1 {
+  width: 100%; /* Line spans full width of the text container */
+  height: 1px; /* Make it a thin line */
+  background-color: white; /* Line color */
+  margin: -5px 0; /* Adjust to center between text */
+}
+
 .navbar.scrolled .brand {
-  display: block;
+  display: flex;
+  align-items: center;
 }
 
 .navbar a {
   text-decoration: none; /* Remove underline from links */
-  font-weight: 400; /* Bold font for visibility */
+  font-weight: 450; /* Bold font for visibility */
   font-size: 13px; /* Adjust font size as needed */
   color: white; /* Default text color */
   transition: transform 0.3s ease, color 0.3s ease; /* Only apply hover effects */
 }
-
-/* .navbar a.active {
-  font-weight: 500;
-  color: #ffde59;
-  transform: scale(1.1);
-  transition: all 0.3s ease;
-} */
 
 .navbar a:hover {
   font-weight: 500;
@@ -111,10 +132,10 @@ header {
 #visit-text {
     position: absolute;
     top: 110px;
-    left: 650px;
+    left: 569px;
     color: #ffde59;
     font-family: 'Adlery Pro', sans-serif;
-    font-size: 80px;
+    font-size: 90px;
     font-style: Normal;
     text-shadow: 5px 6px 0px rgba(0, 0, 0, 0.4); /* Creates a shadow effect */
 }
@@ -122,7 +143,7 @@ header {
 #your-screen {
     position: absolute;
     top: 100px;
-    left: 1100px;
+    left: 1070px;
     color: #fff06b;
     font-family: "League Spartan", sans-serif;
     font-size: 50px;
@@ -191,9 +212,9 @@ header {
 
 .mobile-container {
     position: absolute;
-    bottom: 10%;
-    right: 5%;
-    width: 300px;
+    bottom: 20%;
+    right: 8%;
+    width: 250px;
     height: auto;
 }
 
@@ -202,41 +223,17 @@ header {
     height: auto;
     border-radius: 20px;
 }
-
 /* Responsive Design */
-@media (max-width: 768px) {
-    .naga {
-        font-size: 6rem; /* Adjust headline size */
-    }
-
-    .subtext {
-        font-size: 1.2rem; /* Adjust subtext size */
-    }
-
-    .logos .logo {
-        width: 100px; /* Smaller logos */
-        height: 100px;
-    }
-
-    .mobile-container {
-        width: 80%;
-        right: 10%; /* Center on smaller screens */
-        bottom: 5%;
-    }
-
-    .banner {
-        flex-direction: column; /* Stack banner content */
-        align-items: center; /* Center-align text */
-        text-align: center;
-        padding-left: 0;
-    }
-}
-
-@media (max-width: 480px) {
+@media (min-width: 375px) and (max-width: 400px) {
     .naga {
         font-size: 4rem; /* Further scale down for mobile */
-    }
+        margin-left: 80px;
 
+    }
+    .subtext {
+    position: absolute;
+    color: #23478b;
+   }
     .logos .logo {
         width: 80px; /* Smaller logos for very small screens */
         height: 80px;
@@ -246,6 +243,7 @@ header {
         width: 90%; /* Reduce size of GIF */
     }
 }
+
 
 /* Attractions Section */
 .attractions {
@@ -277,7 +275,9 @@ header {
 
 .attraction-card:hover {
     transform: scale(1.05); /* Makes the card 5% larger */
-    transition: transform 0.3s ease-in-out; /* Smooth animation */
+    transition: transform 0.3s ease-in-out, /* Smooth animation */background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth animation */
+background-color: rgba(0, 0, 0, 0.1); /* Slight darkening effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Add a shadow for emphasis */
 }
 
 h3 {
@@ -518,6 +518,7 @@ text-align: justify;
     font-size: 1rem;
   }
 }
+
 
 
 .features ul li:last-child {
