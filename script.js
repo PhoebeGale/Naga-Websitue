@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Change header background on scroll
   window.addEventListener("scroll", function () {
     if (window.scrollY > 50) {
-      header.style.backgroundColor = "rgba(22, 77, 117, 1)"; // Solid background
+      header.style.backgroundColor = "rgb(22, 77, 117)"; // Solid background
       navbar.classList.add("scrolled"); // Add the class to adjust navbar layout and show logo
     } else {
       header.style.backgroundColor = "rgba(22, 77, 117, 0)"; // Transparent background
@@ -14,3 +14,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+function showSidebar(){
+  const sidebar = document.querySelector('.sidebar')
+  sidebar.style.display = 'flex'
+}
+
+function hideSidebar(){
+  const sidebar = document.querySelector('.sidebar')
+  sidebar.style.display = 'none'
+}
