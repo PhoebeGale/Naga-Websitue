@@ -223,26 +223,6 @@ header {
     height: auto;
     border-radius: 20px;
 }
-/* Responsive Design */
-@media (min-width: 375px) and (max-width: 400px) {
-    .naga {
-        font-size: 4rem; /* Further scale down for mobile */
-        margin-left: 80px;
-
-    }
-    .subtext {
-    position: absolute;
-    color: #23478b;
-   }
-    .logos .logo {
-        width: 80px; /* Smaller logos for very small screens */
-        height: 80px;
-    }
-
-    .mobile-gif {
-        width: 90%; /* Reduce size of GIF */
-    }
-}
 
 
 /* Attractions Section */
@@ -329,7 +309,7 @@ h3 {
     color: #144169;
     border: none;
     border-radius: 25px;
-    padding: 10px 20px;
+    padding: 0.5rem 1rem;
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
@@ -352,6 +332,7 @@ h3 {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1000;
+
 }
 
 .modal-content {
@@ -364,7 +345,43 @@ h3 {
   overflow: hidden;
   text-align: center;
 }
+@media (max-width: 500px) {
+  .modal-content {
+    width: 95%; /* Make it slightly smaller for better fit */
+    height: 70%;
+    top: 10%;
 
+  }
+
+.modal-description p {
+text-align: justify;
+font-size: 13px;
+}
+.modal-description blockquote {
+  font-size: 12px;
+  }
+  .modal {
+    padding: 10px; /* Add padding to avoid content touching edges */
+  }
+
+.full-image-modal .modal-content {
+width: auto; /* Allow width to adjust to the image's original size */
+  height: auto; /* Allow height to adjust to the image's original size */
+  max-width: 90%;
+  max-height: 90%;
+  position: absolute;
+   top: 35%;
+    align-items: center;
+   }
+.text-overlay h2{
+font-size: 15px;
+margin: 0;
+}
+.text-overlay p {
+    font-size: 10px;
+    margin: 0;
+}
+}
 /* Close button */
 .close {
   position: absolute;
