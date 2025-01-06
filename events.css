@@ -126,11 +126,12 @@ header {
     margin: 0; /* Remove default margins if needed */
 }
 
-.page-title h1 {
-    font-family: 'Adlery Pro', sans-serif;
+#World-of-Naga {
+    position: absolute;
+    font-family: 'Adlery Pro', sans-serif;              
+    text-shadow: 5px 6px 0px rgba(0, 0, 0, 0.4); /* Creates a shadow effect */
     font-size: 100px;
     color: white;
-    text-shadow: #000;
     text-align: center;
     position: relative; 
     top: -290px; /* Adjust this value to position it below the header */
@@ -518,7 +519,7 @@ header {
     font-family: 'Adlery Pro', sans-serif;
     font-size: 80px;
     font-style: normal;
-    color: white;
+    color: #164975;
     text-shadow: black;
     text-align: center;
     line-height: 90%;
@@ -533,7 +534,7 @@ header {
     font-family: 'League Spartan', sans-serif;
     font-size: 30px;
     font-style: 100;
-    color: white;
+    color: #164975;
     text-align: center;
     position: relative; 
     bottom: -1630px; /* Adjust this value to position it below the header */
