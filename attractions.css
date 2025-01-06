@@ -224,6 +224,233 @@ header {
     border-radius: 20px;
 }
 
+@media (max-width: 400px) {
+.attract-title {
+    color: #ffde59;
+
+}
+
+#visit-text {
+    position: absolute;
+    top: 160px;
+    left: 50px;
+    font-size: 35px;
+}
+
+#your-screen {
+    position: absolute;
+    top: 156px;
+    left: 250px;
+    font-size: 21px;
+}
+
+.banner {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    margin-top: 200px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.naga {
+    font-size: 80px;
+    position: absolute;
+    top: 200px;
+    left: 80px;
+    margin:0;
+}
+
+.subtext {
+    font-size: 16px;
+    position: absolute;
+    top: 280px;
+    left: 95px;
+    margin:0;
+}
+
+.logos {
+    margin-top: 80px;
+    gap: 5%;
+    padding-left: 30px;
+}
+
+.logo {
+    /* width: 150px; /* Default size for larger screens */
+    /* height: 150px; */
+    object-fit: contain;
+    transition: transform 0.3s ease; /* Add hover animation */
+    width: 70px;
+    height: 70px;
+    margin:0;
+}
+img[src="love_Ph.png"] {
+    width: 190px;
+    height: 80px;
+    margin: 0;
+    padding-left: 30px;
+}
+img[src="favicon.png"] {
+    width: 100px;
+    }
+}
+@media (max-width: 400px) {
+    .mobile-container {
+        display: none; /* Hides the element only for screens 400px wide or smaller */
+    }
+}
+
+/*responsiveeeeeeeenesssss*/
+@media (min-width: 400px) and (max-width: 500px) {
+
+#visit-text {
+    position: absolute;
+    top: 160px;
+    left: 20px;
+    font-size: 49px;
+}
+
+#your-screen {
+    position: absolute;
+    top: 156px;
+    left: 290px;
+    font-size: 28px;
+}
+
+.banner {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    margin-top: 213px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.naga {
+    font-size: 90px;
+    position: absolute;
+    top: 210px;
+    left: 90px;
+    margin:0;
+}
+
+.subtext {
+    font-size: 23px;
+    position: absolute;
+    top: 289px;
+    left: 90px;
+    margin:0;
+}
+
+.logos {
+    margin-top: 90px;
+    gap: 5%;
+    padding-left: 50px;
+}
+
+.logo {
+    /* width: 150px; /* Default size for larger screens */
+    /* height: 150px; */
+    object-fit: contain;
+    transition: transform 0.3s ease; /* Add hover animation */
+    width: 70px;
+    height: 70px;
+    margin:0;
+}
+img[src="love_Ph.png"] {
+    width: 190px;
+    height: 80px;
+    margin: 0;
+    padding-left: 30px;
+}
+img[src="favicon.png"] {
+    width: 100px;
+    }
+}
+@media (min-width: 400px) and (max-width: 500px) {
+.mobile-container {
+display: none;
+}
+}
+
+/*shgcvtxf agdvj x*/
+@media (min-width: 500px) and (max-width: 800px) {
+
+#visit-text {
+    position: absolute;
+    top: 160px;
+    left: 20px;
+    font-size: 49px;
+}
+
+#your-screen {
+    position: absolute;
+    top: 156px;
+    left: 290px;
+    font-size: 28px;
+}
+
+.banner {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    margin-top: 213px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.naga {
+    font-size: 90px;
+    position: absolute;
+    top: 210px;
+    left: 90px;
+    margin:0;
+}
+
+.subtext {
+    font-size: 23px;
+    position: absolute;
+    top: 289px;
+    left: 90px;
+    margin:0;
+}
+
+.logos {
+    margin-top: 90px;
+    gap: 5%;
+    padding-left: 50px;
+}
+
+.logo {
+    /* width: 150px; /* Default size for larger screens */
+    /* height: 150px; */
+    object-fit: contain;
+    transition: transform 0.3s ease; /* Add hover animation */
+    width: 70px;
+    height: 70px;
+    margin:0;
+}
+img[src="love_Ph.png"] {
+    width: 190px;
+    height: 80px;
+    margin: 0;
+    padding-left: 30px;
+}
+img[src="favicon.png"] {
+    width: 100px;
+    }
+}
+
+
 
 /* Attractions Section */
 .attractions {
