@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/adlery-pro" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a0d03e48be.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a0d03e48be.js" crossorigin="anonymous"></script> 
 </head>
 <body>
 
@@ -19,6 +19,7 @@
     <header class="header">
         <nav class="navbar">
             <div class="brand">
+                <img src="Naga_Cebu/naga_logo.png" alt="Municipality of Naga"> 
                 <div class="text">
                     <p>Municipality of Naga</p>
                     <h1></h1>
@@ -36,26 +37,179 @@
 
     <!-- SECTION 1 -->
     <section class="section-1">
+
+        <div class="branding">
+            <p id="A-taste-of">A taste of</p>
+            <h1 id="NAGA">NAGA!</h1>
+        </div>  
+        
     </section>
 
     <!-- SECTION 2 -->
-    <section class="section-2">
+    <section class="section-2" id="SECTION-2">
+        
+        <div class="fest-trad">
+            <div class="details-fest">
+                <h1>Festivities and Traditions</h1>
+                <p class="paragraph">
+                    Naga City proudly celebrates the Dagitab
+                    Festival, also known as the "Festival of
+                    Lights," every December. This vibrant event
+                    features energetic street dancing, captivating
+                    cultural presentations, and a grand parade. It
+                    honors the city’s patron saint, St. Francis of
+                    Assisi, while symbolizing unity, hope, and
+                    progress.<br>
+                    <br>
+                    In addition to the Dagitab Festival, barangays
+                    host annual fiestas dedicated to their patron
+                    saints, showcasing colorful parades, lively
+                    music, and communal feasts. Traditional dances
+                    and music often accompany these major events,
+                    reflecting Naga’s dynamic fusion of heritage
+                    and modernity.
+                </p>
+            </div>
+            <div class="fest-trad-pic">
+                <img src="Naga_Cebu/_event3_pic.jpg" alt="Municipality of Naga">
+            </div>
+        </div>
+
+        <div class="cultural">
+            <div class="details-cultural">
+                <h1>Cultural Heritage</h1>
+                <p class="paragraph">
+                    Naga City proudly celebrates the Dagitab
+                    Festival, also known as the "Festival of
+                    Lights," every December. This vibrant event
+                    features energetic street dancing, captivating
+                    cultural presentations, and a grand parade. It
+                    honors the city’s patron saint, St. Francis of
+                    Assisi, while symbolizing unity, hope, and
+                    progress.<br>
+                    <br>
+                    In addition to the Dagitab Festival, barangays
+                    host annual fiestas dedicated to their patron
+                    saints, showcasing colorful parades, lively
+                    music, and communal feasts. Traditional dances
+                    and music often accompany these major events,
+                    reflecting Naga’s dynamic fusion of heritage
+                    and modernity.  
+                </p>
+            </div>
+            <div class="cultural-trad-pic">
+                <img src="Naga_Cebu/xmas_church.jpg" alt="Municipality of Naga">
+            </div>
+        </div>
+
     </section>
     
+
     <!-- SECTION 3 -->
-    <section class="section-3">
-        
-        
+    <section class="food-section">
+        <h1 class="food-title">Bites of Naga</h1>
+        <div class="food-item">
+            <div class="food-image">
+                <img src="Naga_Cebu/bite1.png" alt="Grilled Foods">
+            </div>
+            <div class="food-details">
+                <h2>Grilled Foods</h2>
+                <p>
+                    Indulge in Naga's signature grilled delights, from juicy barbecue skewers to smoky liempo and freshly 
+                    grilled squid, served with flavorful dipping sauces that elevate the experience.
+                </p>
+            </div>
+        </div>
+    
+        <div class="food-item">
+            <div class="food-image">
+                <img src="Naga_Cebu/bite2.png" alt="Fresh Seafoods">
+            </div>
+            <div class="food-details">
+                <h2>Fresh Seafoods</h2>
+                <p>
+                    Savor the ocean's bounty with Naga's fresh seafood offerings. From succulent crabs to perfectly grilled 
+                    fish and tangy kinilaw, the city's coastal charm shines through every bite.
+                </p>
+            </div>
+        </div>
+    
+        <div class="food-item">
+            <div class="food-image">
+                <img src="Naga_Cebu/bite3.png" alt="Street Foods">
+            </div>
+            <div class="food-details">
+                <h2>Street Foods</h2>
+                <p>
+                    Experience the vibrant street food scene in Naga, Cebu, with must-try favorites like tuslob buwa, 
+                    tempura, shakes, balut, siomai, ginabot, and more. These affordable and flavorful snacks capture the 
+                    city's lively and communal spirit.
+                </p>
+            </div>
+        </div>
     </section>
 
     <!-- SECTION 4 -->
-    <section class="section-4">
+    <section class="dining-section">
+        <h1 class="section-title">Know where to dine!</h1>
+        <div class="card-container">
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="image-slider">
+                    <button class="prev-btn" onclick="changeRestaurant(-1, 'seafood')">&lt;</button>
+                    <img id="seafood-image" src="Naga_Cebu/Osting_restaurant.jpg" alt="Osting’s Seafood and Grill">
+                    <button class="next-btn" onclick="changeRestaurant(1, 'seafood')">&gt;</button>
+                </div>
+                <h3 id="seafood-title">Osting’s Seafood and Grill</h3>
+                <p id="seafood-description">The trendiest chill spot situated in Naga’s Boardwalk. Picturesque View. Great Food. Live Music.</p>
+                <a id="seafood-location" href="https://g.co/kgs/i3gkZAc" class="explore-link" target="_blank">Explore More.</a>
+                <div class="icons">
+                    <a id="seafood-location-icon" href="https://g.co/kgs/i3gkZAc" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
+                    <a id="seafood-phone" href="tel:09177986348"><i class="fas fa-phone-alt"></i></a>
+                    <a id="seafood-facebook" href="https://www.facebook.com/OstingBytheSea/" target="_blank"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
 
-       
-        
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="image-slider">
+                    <button class="prev-btn" onclick="changeRestaurant(-1, 'grill')">&lt;</button>
+                    <img id="grill-image" src="Naga_Cebu/cookout.jpg" alt="The Cookout Cebu">
+                    <button class="next-btn" onclick="changeRestaurant(1, 'grill')">&gt;</button>
+                </div>
+                <h3 id="grill-title">The Cookout Cebu</h3>
+                <p id="grill-description">Home of the best ribs in Naga City, Cebu. All happy smiles after you dine here!</p>
+                <a id="grill-location" href="https://g.co/kgs/bQNKm9A" class="explore-link" target="_blank">Explore More.</a>
+                <div class="icons">
+                    <a id="grill-location-icon" href="https://g.co/kgs/bQNKm9A" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
+                    <a id="grill-phone" href="tel:+9619464569"><i class="fas fa-phone-alt"></i></a>
+                    <a id="grill-facebook" href="https://www.facebook.com/TheCookoutCebu/" target="_blank"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="image-slider">
+                    <button class="prev-btn" onclick="changeRestaurant(-1, 'casual')">&lt;</button>
+                    <img id="casual-image" src="Naga_Cebu/lugen.jpg" alt="Lugen Cafe">
+                    <button class="next-btn" onclick="changeRestaurant(1, 'casual')">&gt;</button>
+                </div>
+                <h3 id="casual-title">Lugen Cafe</h3>
+                <p id="casual-description">Serving up happiness, one guilt-free milk tea and mouthwatering dish at a time. Come savor the flavor.</p>
+                <a id="casual-location" href="https://g.co/kgs/nwTAFKb" class="explore-link" target="_blank">Explore More.</a>
+                <div class="icons">
+                    <a id="casual-location-icon" href="https://g.co/kgs/nwTAFKb" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
+                    <a id="casual-phone" href="tel:09232721908"><i class="fas fa-phone-alt"></i></a>
+                    <a id="casual-facebook" href="https://www.facebook.com/LugenCafe/" target="_blank"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <!-- JavaScript External -->
+    <script src="navbar.js"></script>
+    <script src="restaurants.js"></script>
     
 
-    
 </body>
 </html>

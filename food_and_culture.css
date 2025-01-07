@@ -5,8 +5,8 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
+    font-family: "Montserrat", sans-serif;
     background-color: #000; /* Ensures full background blends with dark design */
     color: #fff;
     overflow-x: hidden; /* Prevents horizontal scrolling */
@@ -104,7 +104,8 @@ header {
 /* MAIN SECTION */
 .section-1 {
     position: relative;
-    height: 110vh;
+    width: 100vw;
+    height: 100vh;
     background: url('Naga_Cebu/fc_page1_bg.jpg') no-repeat center center/cover; 
     display: flex;
     flex-direction: column;
@@ -113,49 +114,341 @@ header {
     text-align: left;
 }
 
+.branding {
+    color: #ffde59;
+    /* padding: 8px; */
+}
+
+#A-taste-of {
+    position: absolute;
+    top: 90px;
+    left: 220px;
+    color: #ffde59;
+    font-family: 'Adlery Pro', sans-serif;              
+    font-size: 120px;
+    font-style: Normal;
+    text-shadow: 5px 6px 0px rgba(0, 0, 0, 0.4); /* Creates a shadow effect */
+    transform: rotate(-7deg);
+}
+  
+  #NAGA {
+    position: absolute;
+    top: 30px;
+    left: 770px;
+    color: #ffde59;
+    font-family: "League Spartan", sans-serif;
+    font-size: 170px;
+    font-style: Normal;
+    text-shadow: 9px 9px 0px rgba(0, 0, 0, 0.4); /* Creates a shadow effect */
+}
+
+
 /* ------------ Page 2 --------------*/
 
 .section-2 {
     position: relative;
-    height: 150vh;
-    background: url('Naga_Cebu/fc_page2_bg.jpg') no-repeat center center/cover; 
+    width: 100vw;
+    height: 120vh;
+    background: url('Naga_Cebu/fc_page2_bg.jpg') no-repeat center center/cover;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* Aligns content at the top */
     padding: 0 30px;
     text-align: left;
+}
+
+/* .food-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: 'Adlery Pro', sans-serif;
+    font-style: normal;
+    color: #ffde59;
+    margin-bottom: 30px;
+} */
+
+.fest-trad, .cultural {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+    gap: 50px;
+    margin-bottom: 90px; /* Adds equal gap between sections */
+}
+
+.details-fest, .details-cultural {
+    width: 50%;
+    text-align: justify;
+    color: black;
+    font-family: "League Spartan", sans-serif;
+}
+
+.details-fest, .paragraph {
+    font-family: "Montserrat", sans-serif;
+
+}
+
+.details-cul, .paragraph {
+    font-family: "Montserrat", sans-serif;
+
+}
+
+.fest-trad-pic, .cultural-trad-pic {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+}
+
+.fest-trad-pic img, .cultural-trad-pic img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.fest-trad-pic img {
+    padding-top: 60px;
+    padding-right: 40px;
+}
+
+.cultural-trad-pic img {
+    padding-top: 60px;
+    padding-right: 40px;
+}
+
+/* Optional: For responsiveness */
+@media screen and (max-width: 768px) {
+    .fest-trad, .cultural {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .details-fest, .details-cultural,
+    .fest-trad-pic, .cultural-trad-pic {
+        width: 100%;
+    }
+}
+
+
+/* Optional: For responsiveness */
+@media screen and (max-width: 768px) {
+    .fest-trad, .cultural {
+        flex-direction: column; /* Stacks content on smaller screens */
+        align-items: center; /* Centers the content */
+        gap: 20px;
+    }
+
+    .details-fest, .details-cultural,
+    .fest-trad-pic, .cultural-trad-pic {
+        width: 100%; /* Ensures full width on smaller screens */
+    }
 }
 
 /* ------------ Page 3 --------------*/
 
-.section-3 {
+.food-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Spacing between food items */
+    padding: 40px;
+    background: url('Naga_Cebu/fc_page3_bg.jpg') no-repeat center center/cover; /* Background image for the entire section */
     position: relative;
-    height: 350vh;
-    background: url('Naga_Cebu/fc_page3_bg.jpg') no-repeat center center/cover; 
+    padding-bottom: 100px; /* Add space at the bottom to keep the last card away from the wave */
+    height: 150vh;
+}
+
+.food-section::before {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Position at the bottom of the section */
+    left: 0;
+    width: 100%;
+    height: 150px; /* Adjust the wave height */
+    background: url('path_to_wave_image.png') no-repeat center center; /* Replace with the actual wave image URL */
+    background-size: cover; /* Ensure wave image covers the section */
+    z-index: 0;
+}
+
+.food-title {
+    font-size: 100px; /* Increased font size */
+    font-family: 'Adlery Pro', sans-serif; /* Ensures a consistent style */
+    font-weight: bold;
+    color: #ffde59; /* Adjust as needed for visibility */
+    text-align: center;
+    margin-bottom: 60px; /* Adds spacing below the title */
+    z-index: 1; /* Ensures the title is visible */
+}
+
+.food-item {
+    display: flex;
+    background: rgba(255, 255, 255, 1); /* Fully opaque white background */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 900px; /* Limits the width of each food item */
+    margin: 0 auto; /* Centers the food item horizontally */
+    z-index: 1; /* Places the content above the overlay */
+}
+
+.food-image {
+    width: 30%; /* Image takes up 30% of the container */
+}
+
+.food-image img {
+    padding-left: 8px;
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px; /* Rounded corners on the left */
+}
+
+.food-details {
+    padding: 20px;
+    padding-right: 60px;
+    width: 70%; /* Text container takes up 70% of the width */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 30px;
-    text-align: left;
-    max-width: 200%;
+    text-align: justify; /* Justifies text */
+    z-index: 1;
 }
 
-/* ------------ Page 4 --------------*/
+.food-details h2 {
+    font-family: "League Spartan", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 10px;
+}
 
-.section-4 {
-    position: relative;
-    height: 20vh; 
-    background-color: #668198; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 30px;
-    text-align: center;  
+.food-details p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
 }
 
 
 
+/* ------------ Page 4 -------------- */
 
+.dining-section {
+    font-family: 'League Spartan', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1eee9;
+    height: 90vh;
+}
 
+.dining-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-family: 'Adlery Pro', sans-serif;
+  color: #164975;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  text-align: left;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 500px; /* Adjusted height for better alignment */
+}
+
+.image-slider {
+  position: relative;
+  width: 100%;
+  height: 180px; /* Uniform height for all images */
+  margin-bottom: 15px;
+}
+
+.image-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin: 0 0 10px 0;
+  color: #333;
+  text-align: left;
+  height: 50px; /* Slightly increased height for proper alignment */
+  display: flex;
+  align-items: center; /* Center-aligns text vertically */
+  justify-content: flex-start;
+}
+
+p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+  font-family: "Montserrat", sans-serif;
+  flex-grow: 1;
+  min-height: 80px; /* Consistent space for descriptions */
+}
+
+.explore-link {
+  display: inline-block;
+  margin-top: auto;
+  text-decoration: none;
+  color: #1c355e;
+  font-weight: bold;
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  color: #888;
+  justify-content: flex-start;
+}
+
+.icons svg {
+  font-size: 1.2rem;
+}
 
 
