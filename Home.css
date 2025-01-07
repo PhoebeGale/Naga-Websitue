@@ -116,39 +116,6 @@ header {
   width: 100%;
 }
 
-/* .sidebar .brand {
-  display: flex;
-  align-items: center;
-  gap: 10px; 
-  width: 100%; 
-  box-sizing: border-box; 
-}
-
-.sidebar .brand img {
-  width: 50px; 
-  height: auto;
-}
-
-.sidebar .brand .text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; 
-  gap: 10px; 
-}
-
-.sidebar .brand .text p {
-  font-size: 14px; 
-  margin: 0; 
-  color: white; 
-}
-
-.sidebar .brand .text h1 {
-  width: 100%; 
-  height: 1px; 
-  background-color: white;
-  margin: -5px 0; 
-} */
-
 .sidebar .sections {
   display: flex;
   flex-direction: column; /* Stack items vertically */
@@ -258,17 +225,6 @@ header {
   z-index: 5;
 }
 
-/* .logo-container {
-  position: relative;
-  display: flex;
-  flex-direction: column; 
-  align-items: flex-end; 
-  justify-content: flex-end;
-  height: 53vh;
-  width: 35%;
-  color: white;
-  text-align: right;
-} */
 
 
 
@@ -316,23 +272,6 @@ header {
   background-color: #37629c;
   height: 0;
 }
-/* .background {
-  position: relative; 
-  width: 100%; 
-  height: 100vh; 
-  overflow: hidden; 
-}
-
-.background img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover; 
-  opacity: 17%;
-} */
-
 .fest {
   position: relative; /* Keeps it positioned relative to its container or previous element */
   width: 100%; /* Makes the image take the full width of the screen */ /* Adjusts the height to fill the viewport */
@@ -382,9 +321,6 @@ header {
 .Home-video {
   position: relative;
   width: 100%; /* Make it stretch across the screen width */
-  /* margin: 0 auto; */
-  /* height: auto; */
-  /* margin-bottom: ; */
 }
 
 video {
@@ -406,15 +342,6 @@ video {
   text-align: center; 
   z-index: 10;
 }
-
-/* .Home-video img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-  position: absolute;
-  top: 670px;
-} */
 
 .map {
   position: relative; /* Keeps it positioned relative to its container or previous element */
@@ -564,12 +491,6 @@ video {
   color: white; /* Default icon color */
 }
 
-/* Hover effect for icon */
-/* .contact-item i:hover {
-  transform: scale(1.2); 
-  color: #007bff; 
-} */
-
 .contact-item a {
   color: white;
   font-family: "Montserrat", sans-serif;
@@ -583,20 +504,6 @@ video {
   text-decoration: none; /* Adds an underline */
   transition: color 0.3s ease;
 }
-
-/* @media (max-width: 600px) {
-  .landing-container {
-    text-align: center;
-    margin: 0;
-  }
-  
-  .landing-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-  }
-} */
 
 .menu-button {
   display: none;
